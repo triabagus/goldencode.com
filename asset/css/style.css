@@ -1,0 +1,476 @@
+body {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-tumb {
+    background: gold;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 50px;
+    background: gold;
+}
+
+.list-menu {
+    padding: 8px 0px;
+}
+
+.padding-rows {
+    width: 100%;
+}
+
+.main {
+    float: left;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    margin: 55px;
+}
+
+.containers {
+    width: 100%;
+    height: 200px;
+    padding: 120px;
+    background-color: #212324;
+    box-shadow: 0 2px 16px #212324;
+}
+
+.containers input {
+    padding: 10px;
+    border-radius: 30px;
+    text-align: left;
+    margin: 15px 0;
+    width: 70%;
+    border: 0px;
+    color: rgb(179, 179, 179);
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn-gold {
+    background-color: gold;
+    color: #212324;
+}
+
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #ffff;
+    overflow: auto;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: gold;
+    width: 21%;
+    font-weight: 800;
+    text-align: center;
+    float: left;
+    padding: 100px 16px;
+    text-decoration: none;
+    margin: 15px 22px;
+    background-color: #212324;
+    border: 2px solid #f0f0f0;
+}
+
+ul.sidenav li a img {
+    width: 100%;
+}
+
+ul.sidenav li a.active {
+    background-color: gold;
+    color: white;
+    padding: 87px 16px;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: gold;
+    color: #212324;
+    transition: 1s;
+}
+
+div.content {
+    margin-left: 20%;
+    padding: 100px 0px;
+    height: 200px;
+}
+
+div.content {
+    width: 33%;
+    float: left;
+    margin: 20px 40px;
+    border-radius: 20px;
+    padding: 20px 40px;
+    box-shadow: 0px 0px 11px 1px #293a4838;
+}
+
+div.content img {
+    max-width: 300px;
+}
+
+.lewatdesign {
+    background-color: rgb(54, 54, 54);
+    color: white;
+}
+
+.lewatdesign ul li {
+    margin: 10px;
+}
+
+.card-long {
+    width: 85%;
+    float: left;
+    margin: 20px;
+    color: #fff;
+    border-radius: 20px;
+    padding: 120px 40px;
+    box-shadow: 0px 0px 11px 1px #293a4838;
+    background-image: url('../img/fabian-grohs-448419-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.title-cover {
+    padding: 10px 30px;
+    background-color: #758eb799;
+    border-radius: 30px;
+    width: 350px;
+}
+
+div.content .card h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.sponsor {
+    margin: 50px 0px;
+    width: 95%;
+    float: left;
+}
+
+.sponsor img {
+    width: 200px;
+    height: auto;
+    margin: 0px 5px;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    padding: 30px 0px 0px 0px;
+    background-color: #212324;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer h2 {
+    margin: 45px 50px 10px 50px;
+}
+
+.footer .list-footer {
+    float: left;
+    width: 100%;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.footer .list-footer img {
+    width: 250px;
+    margin: 100px 15px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.footer .copy-right {
+    text-align: center;
+    margin-top: -3px;
+    color: #000;
+    background-color: #fff;
+    padding-top: 190px;
+    padding-bottom: 50px;
+}
+
+#top {
+    position: fixed;
+    bottom: 20px;
+    display: none;
+    right: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: gold;
+    outline: none;
+    height: 50px;
+    width: 50px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    z-index: 10;
+}
+
+#top:hover {
+    opacity: 0.7;
+}
+
+#top:active {
+    opacity: 0.9;
+}
+
+/* /////////////////////////////////// Nav Bar */
+.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    -webkit-transition: .7s;
+    transition: .7s;
+    height: 80px;
+    background-color: #212324;
+}
+
+.nav,
+.nav__logo {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: gold;
+}
+
+.nav,
+.nav__logo:hover {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: gold;
+    text-decoration: none;
+}
+
+.nav__container {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container_draw {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav__menu {
+    font-weight: 400;
+    color: #e8e8e8;
+    font-size: .875rem;
+    padding-top: .25rem;
+}
+
+ul,
+ul li {
+    list-style-type: none;
+}
+
+.nav__menu li {
+    display: inline-block;
+}
+
+.nav__item:hover {
+    color: #fff;
+}
+
+.nav__menu ul li a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    text-decoration: none;
+    -webkit-transition: color .7s, border-color .7s;
+    transition: color .7s, border-color .7s;
+    cursor: pointer;
+    color: white;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+.nav--full {
+    height: 65px;
+    background-color: #212324;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .07), 0 1px 5px 0 rgba(0, 0, 0, .11), 0 3px 1px -2px rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .07), 0 1px 5px 0 rgba(0, 0, 0, .11), 0 3px 1px -2px rgba(0, 0, 0, .1);
+}
+
+@media (min-width: 992px) {
+    .nav__menu {
+        font-size: .95rem;
+        padding-top: .65rem;
+    }
+
+    .nav__item--list {
+        margin-left: 1rem;
+    }
+
+    .nav__item:hover:after {
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    .nav__item:after {
+        display: block;
+        content: '';
+        border-bottom: solid 1px #fff;
+        -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: -webkit-transform 250ms ease-in-out;
+        transition: -webkit-transform 250ms ease-in-out;
+        transition: transform 250ms ease-in-out;
+        transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+    }
+}
+
+
+@media screen and (max-width:900px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+
+    }
+
+    ul.sidenav li a {
+        float: left;
+        width: 90%;
+        padding: 15px;
+        height: auto;
+
+    }
+
+    .containers {
+        padding: 120px 0px;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+
+    div.header img,
+    span {
+        display: none;
+    }
+
+    div.content {
+        max-height: 2000px;
+    }
+
+    .footer .list-footer img {
+        margin: 30px 15px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    ul.sidebav li a {
+        text-align: center;
+        float: left;
+        width: 90%;
+    }
+}
+
+/* sosmed */
+.sticky-container {
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+    right: -120px;
+    top: 190px;
+    width: 210px;
+    z-index: 1100;
+}
+
+.sticky li {
+    list-style-type: none;
+    color: white;
+    height: 45px;
+    padding: 2px 0px;
+    margin: 0px 0px 1px 0px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.sticky li:hover {
+    margin-left: -115px;
+}
+
+.sticky li i {
+    font-size: 32px;
+    float: left;
+    margin: 5px 12px;
+    margin-right: 22px;
+}
+
+.sticky li p {
+    padding-top: 5px;
+    margin: 0px;
+    line-height: 16px;
+    font-size: 11px;
+}
+
+.sticky li p a {
+    text-decoration: none;
+    color: white;
+}
+
+.sticky li p a:hover {
+    text-decoration: underline;
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.github {
+    background-color: #211F1F;
+}
+
+.linkedin {
+    background-color: #007bb5;
+}
+
+.youtube {
+    background-color: #ff0000;
+}
+
+.instagram {
+    background-color: #c32aa3;
+}
+
+.lazy {
+    opacity: 0;
+    transition: opacity 1s;
+}
