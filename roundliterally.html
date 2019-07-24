@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Round Literally</title>
+    <style>
+        .container {
+            background-color: #238189;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .container ul {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        .container ul li:after,
+        .container ul:after {
+            content: "";
+            display: block;
+        }
+
+        .container ul li:after {
+            width: 2em;
+            height: 2em;
+            background-color: #E8F3EE;
+            border-bottom-left-radius: 2em;
+            border-top-right-radius: 2em;
+        }
+
+        .container li {
+            position: absolute;
+            padding-bottom: 9.6em;
+            top: 0;
+            left: 0;
+        }
+
+        .container li:nth-child(1) {
+            transform: rotate(0deg);
+            animation-delay: .125s;
+        }
+
+        .container li:nth-child(2) {
+            transform: rotate(36deg);
+            animation-delay: .25s;
+        }
+
+        .container li:nth-child(3) {
+            transform: rotate(72deg);
+            animation-delay: .375s;
+        }
+
+        .container li:nth-child(4) {
+            transform: rotate(108deg);
+            animation-delay: .5s;
+        }
+
+        .container li:nth-child(5) {
+            transform: rotate(144deg);
+            animation-delay: .625s;
+        }
+
+        .container li:nth-child(6) {
+            transform: rotate(180deg);
+            animation-delay: .75s;
+        }
+
+        .container li:nth-child(7) {
+            transform: rotate(216deg);
+            animation-delay: .875s;
+        }
+
+        .container li:nth-child(8) {
+            transform: rotate(252deg);
+            animation-delay: .1s;
+        }
+
+        .container li:nth-child(9) {
+            transform: rotate(288deg);
+            animation-delay: 1.125s;
+        }
+
+        .container li:nth-child(10) {
+            transform: rotate(324deg);
+            animation-delay: 1.25s;
+        }
+
+        .container li {
+            animation: 2.5s leafAnime infinite;
+        }
+
+        @keyframes leafAnime {
+
+            0%,
+            55%,
+            100% {
+                padding: 0 0 9.6em 0;
+            }
+
+            4%,
+            50% {
+                padding: 4.8em 0;
+            }
+        }
+
+        .back {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a class="back" href="index.php">Back</a></h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

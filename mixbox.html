@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Mix Loader</title>
+    <style>
+        body {
+            background: #34404e;
+            --border: 10px;
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            perspective: 500px;
+            background: #34404e;
+        }
+
+        .loader span {
+            position: absolute;
+            border: var(--border) solid #51b9c3;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            animation: rotate 8s linear infinite;
+        }
+
+        span:after,
+        span:before {
+            content: '';
+            position: absolute;
+            height: 50%;
+            background: #f0f0f0;
+            width: var(-border);
+        }
+
+        .loader span:before {
+            top: calc(-1 * var(--border));
+            left: calc(-1 * var(--border));
+        }
+
+        .loader span:after {
+            bottom: calc(-1 * var(--border));
+            right: calc(-1 * var(--border));
+        }
+
+        .loader span:nth-child(2) {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            animation-duration: 6s;
+        }
+
+        .loader span:nth-child(3) {
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            animation-duration: 4s;
+        }
+
+        .loader span:nth-child(4) {
+            top: 40px;
+            left: 40px;
+            right: 40px;
+            bottom: 40px;
+            animation-duration: 2s;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+
+        }
+
+        .back {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+
+</html>

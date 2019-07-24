@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Night and Morning</title>
+    <style>
+        * {
+            --sun-mon-color: #dfdfdf;
+            --sun-color: #ffcf96;
+            --night-color: #5281cc;
+            --day-color: skyblue;
+            transition: all .4s cubic-bezier(.7, -.57, 0.27, 1.57);
+        }
+
+        body {
+            background-color: #d46c73;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #fff;
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wrapper input {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .toggle {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            height: 50px;
+            background-color: var(--day-color);
+            border-radius: 50px;
+        }
+
+        .toggle:before,
+        .toggle:after {
+            position: absolute;
+            top: 15px;
+            font-size: 18px;
+        }
+
+        .toggle:before {
+            content: 'AM';
+            left: -50px;
+        }
+
+        .toggle:after {
+            content: 'PM';
+            right: -50px;
+            color: var(--day-color);
+        }
+
+        .sun-mon {
+            display: inline-block;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 44px;
+            height: 44px;
+            background-color: var(--sun-color);
+            border-radius: 50%;
+            box-shadow: 0 1px 5px #0000004f;
+            transform: rotate(-45deg);
+            z-index: 5;
+        }
+
+        .sun-mon .hole {
+            position: absolute;
+            background-color: var(--sun-mon-color);
+            opacity: 0;
+            transition: opacity 200ms ease-in-out;
+            border-radius: 100%;
+            width: 4px;
+            height: 4px;
+            top: 18px;
+            left: 8px;
+            box-shadow: inset 1px 0 2px rgba(51, 51, 51, 0.658);
+        }
+
+        .sun-mon .hole-2 {
+            top: 30px;
+            left: 20px;
+            width: 6px;
+            height: 6px;
+        }
+
+        .sun-mon .hole-3 {
+            top: 8px;
+            left: 25px;
+            width: 8px;
+            height: 8px;
+        }
+
+        .cloud {
+            width: 22px;
+            height: 10px;
+            border-radius: 2px;
+            position: relative;
+            background: #fff;
+            left: 40px;
+            top: 10px;
+            z-index: 8;
+        }
+
+        .cloud:before,
+        .cloud:after {
+            content: '';
+            border-radius: 50%;
+            position: absolute;
+            background: #fff;
+        }
+
+        .cloud:before {
+            width: 8px;
+            height: 8px;
+            top: -3px;
+            left: 3px;
+        }
+
+        .cloud:after {
+            width: 10px;
+            height: 10px;
+            top: -4px;
+            left: 9px;
+        }
+
+        .cloud+.cloud {
+            top: 20px;
+            left: 35px;
+            z-index: 1;
+        }
+
+        .star {
+            height: 3px;
+            width: 3px;
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            background: #fff;
+            box-shadow: 0 0 4px 0 #fff;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .star:nth-child(2) {
+            top: 10px;
+            left: 40px;
+            width: 1px;
+            height: 1px;
+        }
+
+        .star:nth-child(3) {
+            top: 15px;
+            left: 18px;
+            width: 2px;
+            height: 2px;
+        }
+
+        .star:nth-child(4) {
+            top: 32px;
+            left: 35px;
+            width: 2px;
+            height: 2px;
+        }
+
+        .star:nth-child(5) {
+            top: 35px;
+            left: 20px;
+            width: 1px;
+            height: 1px;
+        }
+
+        input:checked+.toggle {
+            background-color: var(--night-color);
+        }
+
+        input:checked+.toggle:before {
+            color: var(--night-color);
+        }
+
+        input:checked+.toggle:after {
+            color: #fff;
+        }
+
+        input:checked+.toggle .sun-mon {
+            background-color: var(--sun-mon-color);
+            transform: translateX(50px);
+        }
+
+        input:checked+.toggle .sun-mon .hole {
+            opacity: 1;
+        }
+
+        input:checked+.toogle .cloud {
+            transform: translateX(-25px);
+            opacity: 0;
+        }
+
+        input:not(:checked)+.toggle .star {
+            transform: translateX(25px);
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div class="wrapper">
+        <input type="checkbox" id="day-night" />
+        <label for="day-night" class="toggle">
+            <div class="sun-mon">
+                <div class="hole hole-1"></div>
+                <div class="hole hole-2"></div>
+                <div class="hole hole-3"></div>
+            </div>
+            <div class="extra">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+            </div>
+        </label>
+    </div>
+</body>
+
+</html>

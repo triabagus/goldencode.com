@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button Hover C Sharp</title>
+    <style>
+        body {
+            background-color: #d9de6e;
+        }
+
+        *,
+        *:before,
+        *:after {
+            font-size: 62.5%;
+            box-sizing: border-box;
+            transition: .6s ease-in-out;
+            z-index: -1;
+        }
+
+        .btn {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            height: 7.8rem;
+            max-width: 35rem;
+            margin: 1.6rem auto;
+            text-transform: uppercase;
+            border: 2px solid currentColor;
+            color: #31655a;
+        }
+
+        a {
+            text-decoration: none;
+            line-height: 7.8rem;
+            font-size: 1.6rem;
+            z-index: 9;
+            font-weight: bold;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .btn:before,
+        .btn:after {
+            position: absolute;
+            top: 50%;
+            content: "";
+            width: 2rem;
+            height: 2rem;
+            background-color: #286b5d;
+            border-radius: 50%;
+        }
+
+        .btn:before {
+            left: -2rem;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn:after {
+            right: -2rem;
+            transform: translate(50%, -50%);
+        }
+
+        .btn:hover {
+            color: #ffffff;
+        }
+
+        .btn:hover:before {
+            animation: fromLeft .8s both;
+        }
+
+        .btn:hover:after {
+            animation: fromRight .8s both;
+        }
+
+        @keyframes fromLeft {
+            50% {
+                left: 50%;
+                width: 2rem;
+                height: 2rem;
+            }
+
+            100% {
+                left: 50%;
+                width: 37.5rem;
+                height: 37.5rem;
+            }
+        }
+
+        @keyframes fromRight {
+            50% {
+                right: 50%;
+                width: 2rem;
+                height: 2rem;
+            }
+
+            100% {
+                right: 50%;
+                width: 37.5rem;
+                height: 37.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.php" class="btn">Hover Me and Click to Dashboard</a>
+</body>
+
+</html>

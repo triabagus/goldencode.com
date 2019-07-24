@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulator Js</title>
+
+    <style>
+        h1 {
+
+            margin: 0px;
+        }
+
+        h1 a {
+            color: white;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rows {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        input {
+            width: 85px;
+            height: 85px;
+            font-size: 30px;
+            border-radius: 50%;
+            border: 0;
+            margin: 4px;
+        }
+
+        input:focus {
+            outline: none;
+            background-color: #636363;
+        }
+
+        .result {
+            width: 355px;
+            color: white;
+            background-color: #000;
+            border: 0px;
+            border-radius: 10px;
+            text-align: right;
+            font-size: 50px;
+        }
+
+        .number {
+
+            background-color: #292828;
+            color: white;
+        }
+
+        .zero {
+            width: 182px;
+            border-radius: 50px;
+        }
+
+        .delete {
+            width: 270px;
+            border-radius: 50px;
+        }
+
+        .operator {
+            background-color: #ff8400;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="index.php">Back</a></h1>
+    <div class="container">
+
+        <div class="rows first-row">
+            <input type="button" class="result" value="0">
+        </div>
+
+        <div class="rows second-row">
+            <input type="button" value="C" class="delete">
+            <input type="button" value="/" class="operator">
+        </div>
+
+        <div class="rows third-row">
+            <input type="button" value="7" class="number">
+            <input type="button" value="8" class="number">
+            <input type="button" value="9" class="number">
+            <input type="button" value="*" class="operator">
+        </div>
+
+        <div class="rows fourth-row">
+            <input type="button" value="4" class="number">
+            <input type="button" value="5" class="number">
+            <input type="button" value="6" class="number">
+            <input type="button" value="-" class="operator">
+        </div>
+
+        <div class="rows fifth-row">
+            <input type="button" value="1" class="number">
+            <input type="button" value="2" class="number">
+            <input type="button" value="3" class="number">
+            <input type="button" value="+" class="operator">
+        </div>
+
+        <div class="rows sixth-row">
+            <input type="button" value="0" class="zero number">
+            <input type="button" value="," class="number">
+            <input type="button" value="=" class="calculateResult operator">
+        </div>
+    </div>
+
+    <script>
+        //get all input
+        let input = document.querySelectorAll("input");
+        //get input with class result => input (first-row) 
+        let result = document.querySelector(".result");
+
+        for (let i = 0; i < input.length; i++) {
+            //when someone clicks on an input
+            input[i].addEventListener("click", () => {
+
+                //..with class delete (c), then ..
+                if (input[i].classList.contains("delete")) {
+                    //..->delete the atribute value
+                    result.removeAttribute('value');
+                    result.value = 0;
+                    //..with class calculateResult (=), then..
+                } else if (input[i].classList.contains("calculateResult")) {
+                    //..-> calculate the result
+                    result.value = eval(result.value);
+                } else {
+                    // if value 0 then..
+                    if (result.value == 0) {
+                        result.value = "";
+                        result.value = result.value + input[i].value;
+                    } else {
+                        //-> change the value attribute to the click numbers
+                        result.value = result.value + input[i].value;
+                    }
+
+                }
+
+            });
+        }
+    </script>
+</body>
+
+</html>

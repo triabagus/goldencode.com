@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation Ring</title>
+    <style>
+        body {
+            background-color: #7c4070;
+        }
+
+        .container {
+            position: absolute;
+            left: 45%;
+            top: 45%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ring {
+            position: absolute;
+            height: 33px;
+            width: 110px;
+            border: 1px solid #a9c8f6;
+            animation: 2.2s ease 0s infinite float;
+        }
+
+        .ring:nth-child(1) {
+            left: 40px;
+            top: 12px;
+            width: 20px;
+            height: 6px;
+        }
+
+        .ring:nth-child(2) {
+            left: 35px;
+            top: 11px;
+            width: 30px;
+            height: 9px;
+            animation-delay: .1s;
+        }
+
+        .ring:nth-child(3) {
+            left: 30px;
+            top: 10px;
+            width: 40px;
+            height: 12px;
+            animation-delay: .2s;
+        }
+
+        .ring:nth-child(4) {
+            left: 25px;
+            top: 9px;
+            width: 50px;
+            height: 15px;
+            animation-delay: .3s;
+        }
+
+        .ring:nth-child(5) {
+            left: 20px;
+            top: 8px;
+            width: 60px;
+            height: 18px;
+            animation-delay: .4s;
+        }
+
+        .ring:nth-child(6) {
+            left: 15px;
+            top: 7px;
+            width: 70px;
+            height: 21px;
+            animation-delay: .5s;
+        }
+
+        .ring:nth-child(7) {
+            left: 10px;
+            top: 6px;
+            width: 80px;
+            height: 24px;
+            animation-delay: .6s;
+        }
+
+        .ring:nth-child(8) {
+            left: 5px;
+            top: 5px;
+            width: 90px;
+            height: 27px;
+            animation-delay: .7s;
+        }
+
+        .ring:nth-child(9) {
+            width: 100px;
+            top: 4px;
+            height: 30px;
+            animation-delay: .8s;
+        }
+
+        .ring:nth-child(10) {
+            left: -5px;
+            top: 3px;
+            width: 110px;
+            height: 33px;
+            animation-delay: .9s;
+        }
+
+        @keyframes float {
+            0% {
+                animation-timing-function: cubic-bezier(.44, .03, .53, .96);
+            }
+
+            50% {
+                transform: translateY(58px);
+                opacity: .25;
+                animation-timing-function: cubic-bezier(.44, .03, .53, .96);
+            }
+        }
+
+        .back {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="container">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Bounce</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            background-color: #f6f4ea;
+        }
+
+        .container {
+            position: relative;
+            width: 150px;
+        }
+
+        .box {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #e06f4e;
+            animation: box-bouncing 2s ease-in-out infinite;
+        }
+
+        .box-2 {
+            background-color: #449ed5;
+        }
+
+        .box-2,
+        .box-2+.shadow {
+            animation-delay: .3s;
+        }
+
+        .box-3 {
+
+            background-color: #ffb838;
+        }
+
+        .box-3,
+        .box-3+.shadow {
+            animation-delay: .7s;
+        }
+
+        .shadow {
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            bottom: -60px;
+            border-radius: 50%;
+            background-color: #888;
+            animation: box-shadow 2s ease-in-out infinite;
+        }
+
+        @keyframes box-shadow {
+            50% {
+                background-color: #9999996e;
+                transform: scale(.4, 1.2);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        @keyframes box-bouncing {
+            50% {
+                border-radius: 0;
+                transform: translateY(-200px) rotate(360deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(720deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="container">
+        <div class="box"></div>
+        <div class="shadow"></div>
+    </div>
+
+    <div class="container">
+        <div class="box box-2"></div>
+        <div class="shadow"></div>
+    </div>
+
+    <div class="container">
+        <div class="box box-3"></div>
+        <div class="shadow"></div>
+    </div>
+</body>
+
+</html>

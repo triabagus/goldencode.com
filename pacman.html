@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pacman and Ghost</title>
+    <style>
+        body {
+            background: #EBEBEB;
+        }
+
+        .wrapper {
+            position: relative;
+            box-sizing: border-box;
+            width: 70%;
+            height: 85%;
+            float: left;
+            padding: 10% 1%;
+            background-color: #333;
+            box-shadow: 0px 40px 60px -20px grey;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        .pacman {
+            width: 70px;
+            height: 70px;
+            background: transparent;
+            border-radius: 50%;
+            position: absolute;
+            display: inline-block;
+            top: 38%;
+            z-index: 7;
+        }
+
+        .pacman:after,
+        .pacman:before {
+            content: "";
+            display: block;
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            border: 35px solid #FFCC00;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            animation: upperJaw 1s ease infinite;
+            border-radius: 50%;
+        }
+
+        .pacman:after {
+            border: 35px solid #FFCC00;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            animation: lowerJaw 1s ease infinite;
+        }
+
+        .pacman .eye {
+            width: 8px;
+            height: 8px;
+            background: #333;
+            position: absolute;
+            border-radius: 50%;
+            top: 15px;
+            left: 35px;
+        }
+
+        @keyframes upperJaw {
+
+            0%,
+            100% {
+                transform: rotate(-45deg);
+            }
+
+            50% {
+                transform: rotate(-80deg);
+            }
+        }
+
+        @keyframes lowerJaw {
+
+            0%,
+            100% {
+                transform: rotate(-40deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .earn {
+            position: absolute;
+            width: 75%;
+        }
+
+        .points {
+            display: inline-block;
+            position: relative;
+            left: 100px;
+            width: 15px;
+            height: 15px;
+            border-radius: 5px;
+            background: white;
+            margin: 38px;
+            z-index: 5;
+        }
+
+        .points:nth-child(6) {
+            margin-left: 150px;
+        }
+
+        @keyframes wgl {
+            0% {
+                bottom: -15px;
+            }
+
+            100% {
+                bottom: -16px;
+            }
+        }
+
+        @keyframes lookDown {
+            0% {
+                margin: 4px 0 0 1px;
+            }
+
+            100% {
+                margin: 8px 0 0 1px;
+            }
+        }
+
+        .ghost {
+            top: 34%;
+            right: -12%;
+            margin: 0 10px;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            border-radius: 50px 50px 0 0;
+            background: #c91212;
+            float: left;
+            z-index: 9;
+        }
+
+        .ghost .eyes {
+            position: absolute;
+            top: 12px;
+            left: 4px;
+        }
+
+        .ghost .eyes div {
+            margin: 0 4px;
+            width: 15px;
+            height: 17px;
+            float: left;
+            background: #fff;
+            border-radius: 15px;
+        }
+
+        .ghost .eyes .eyeBall {
+            margin: 4px 0 0 0;
+            width: 5px;
+            height: 5px;
+            background: #333;
+            border-radius: 100%;
+        }
+
+        .ghost .bottom {
+            position: absolute;
+        }
+
+        .ghost .bottom .cLegs {
+            margin-left: -4px;
+            width: 26px;
+            height: 26px;
+            float: left;
+            background: #c91212;
+            border-radius: 30px;
+        }
+
+        .ghost .eyes .eyeBall {
+            animation: lookDown .8s infinite alternate;
+        }
+
+        .ghost .bottom {
+            animation: wgl .4s infinite alternate;
+        }
+
+        .wrapper:hover .pacman {
+            animation: pacmanMov 2s linear forwards;
+        }
+
+        .wrapper:hover .points:nth-child(1) {
+            opacity: 0;
+            transition-delay: .21s;
+        }
+
+        .wrapper:hover .points:nth-child(2) {
+            opacity: 0;
+            transition-delay: .32s;
+        }
+
+        .wrapper:hover .points:nth-child(3) {
+            opacity: 0;
+            transition-delay: .45s;
+        }
+
+        .wrapper:hover .points:nth-child(4) {
+            opacity: 0;
+            transition-delay: .57s;
+        }
+
+        .wrapper:hover .points:nth-child(5) {
+            opacity: 0;
+            transition-delay: .71s;
+        }
+
+        .wrapper:hover .ghost {
+            right: 99%;
+            transition: 1.22s right .78s ease-in;
+        }
+
+        @keyframes pacmanMov {
+            0% {
+                left: 1%;
+                transform: rotateZ(0);
+            }
+
+            50% {
+                left: 55%;
+                transform: rotateZ(0);
+            }
+
+            51% {
+                left: 55%;
+                transform: scaleX(-1);
+            }
+
+            100% {
+                transform: scaleX(-1);
+                left: -10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="wrapper">
+        <div class="pacman"><span class="eye"></span></div>
+        <div class="earn">
+            <div class="points"></div>
+            <div class="points"></div>
+            <div class="points"></div>
+            <div class="points"></div>
+            <div class="points"></div>
+            <div class="points"></div>
+        </div>
+        <div class="ghost">
+            <div class="eyes">
+                <div>
+                    <div class="eyeBall"></div>
+                </div>
+                <div>
+                    <div class="eyeBall"></div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="cLegs"></div>
+                <div class="cLegs"></div>
+                <div class="cLegs"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

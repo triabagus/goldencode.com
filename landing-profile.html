@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Profile</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .container {
+            position: absolute;
+            left: 35%;
+            top: 45%;
+            perspective: 1000px;
+        }
+
+        .card {
+            position: absolute;
+            width: 450px;
+            height: 110px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            animation: spin 5s ease infinite;
+        }
+
+        .card img {
+            float: left;
+            margin: 5px;
+            border-radius: 50%;
+        }
+
+        a {
+            position: absolute;
+            text-decoration: none;
+            font-size: 24px;
+            letter-spacing: 2px;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 20px;
+            left: 110px;
+            color: #0d11f3;
+
+        }
+
+        p {
+            position: absolute;
+            font-size: 18px;
+            font-family: monospace;
+            top: 45px;
+            left: 110px;
+            color: #333;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotateY(0);
+            }
+
+            to {
+                transform: rotateY(1turn);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="asset/img/me.jpg" alt="me">
+            <a href="index.php" class="author">Tria</a>
+            <p>Web Developer</p>
+        </div>
+    </div>
+</body>
+
+</html>

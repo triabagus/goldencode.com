@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button Hover</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #fcf6f5;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+            transition: .55s ease-in-out;
+        }
+
+        *:before,
+        *:after {
+            z-index: -1;
+        }
+
+        a:hover {
+            color: #f8f1e0;
+        }
+
+        .btn-1 {
+            color: #b14145;
+        }
+
+        .btn-2 {
+            color: #31655a;
+        }
+
+        a {
+            text-decoration: none;
+            line-height: 60px;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            height: 60px;
+            max-width: 200px;
+            margin: 20px auto;
+            text-transform: uppercase;
+            border: 2px solid currentColor;
+            transition: color .1s linear;
+        }
+
+        .btn-1:before,
+        .btn-1:after,
+        .btn-1 span:before,
+        .btn-1 span:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #b14145;
+        }
+
+        .btn-1:before {
+            transform: translate(-100%, -100%);
+        }
+
+        .btn-1:after {
+            transform: translate(-100%, 100%);
+        }
+
+        .btn-1 span:before {
+            transform: translate(100%, -100%);
+        }
+
+        .btn-1 span:after {
+            transform: translate(100%, 100%);
+        }
+
+        .btn-1:hover:before {
+            transform: translate(-50%, -50%);
+        }
+
+        .btn-1:hover:after {
+            transform: translate(-50%, 50%);
+        }
+
+        .btn-1:hover span:before {
+            transform: translate(50%, -50%);
+        }
+
+        .btn-1:hover span:after {
+            transform: translate(50%, 50%);
+        }
+
+        .btn-2:before,
+        .btn-2:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 0 solid;
+        }
+
+        .btn-2:before {
+            content: "";
+            bottom: 0;
+            left: 0;
+            border-color: transparent transparent transparent #31655a;
+        }
+
+        .btn-2:after {
+            top: 0;
+            right: 0;
+            border-color: transparent #31655a transparent transparent;
+        }
+
+        .btn-2:hover:before,
+        .btn-2:hover:after {
+            border-width: 60px 242px;
+        }
+
+        .back:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="wrap">
+
+        <a href="#" class="btn-1">
+            <span>Hover Me</span>
+        </a>
+
+        <a href="#" class="btn-2">
+            Hover Me
+        </a>
+
+    </div>
+</body>
+
+</html>

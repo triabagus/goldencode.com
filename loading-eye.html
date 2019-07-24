@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loading Eye</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+
+        .eye {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #f5f5f1;
+            left: 50%;
+            top: 50%;
+            border-radius: 80% 0;
+            transform: translate(-50%, -50%) rotate(45deg);
+            overflow: hidden;
+        }
+
+        #ball,
+        .sclera {
+            top: 50%;
+            left: 50%;
+        }
+
+        #ball {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #111;
+            border-radius: 50%;
+            border: 25px solid #084481;
+            animation: move 4s ease 4s;
+            transform: translate(-50%, -50%);
+        }
+
+        .sclera {
+            position: absolute;
+            width: 300px;
+            height: 145px;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        .sclera span {
+            display: flex;
+            width: 100%;
+            height: 0;
+            background-color: #f2fe90;
+            border-radius: 0 0 50% 50%;
+            animation: close 2s ease 1.5s;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+
+            20% {
+                transform: translate(-70%, -70%);
+            }
+
+            40% {
+                transform: translate(-50%, -50%);
+            }
+
+            60% {
+                transform: translate(-30%, -30%);
+            }
+
+            80% {
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @keyframes close {
+
+            0%,
+            50%,
+            100% {
+                height: 0;
+            }
+
+            25%,
+            80%,
+            85% {
+                height: 100%;
+            }
+        }
+
+        h2 a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><a href="index.php">Back</a></h2>
+    <div class="eye">
+        <div id="ball"></div>
+
+        <div class="sclera"><span></span></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #4f3f68;
+            margin: 0;
+            padding: 225px 0px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .clock {
+            align-items: center;
+            background: #eeeeee;
+            border-radius: 160px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, .18);
+            display: flex;
+            height: 160px;
+            justify-content: center;
+            width: 160px;
+            position: relative;
+        }
+
+        .mnHand {
+            animation: clockSpinner 1s linear infinite;
+            height: 48px;
+            width: 3.5px;
+        }
+
+        .hrHand {
+            animation: clockSpinner 6s linear infinite;
+            height: 28px;
+            width: 3px;
+        }
+
+        .mnHand,
+        .hrHand {
+            background: #d67573;
+            border-radius: 100px;
+            transform-origin: top;
+            position: absolute;
+            top: 50%;
+        }
+
+        .hrDot {
+            background: #d67573;
+            border-radius: 8px;
+            height: 8px;
+            width: 8px;
+        }
+
+        @keyframes clockSpinner {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .back {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="container">
+        <div class="clock">
+            <div class="mnHand"></div>
+            <div class="hrHand"></div>
+            <div class="hrDot"></div>
+        </div>
+    </div>
+</body>
+
+</html>

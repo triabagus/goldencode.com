@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wave Cup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #262626;
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .loading .cup {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            border: 6px solid white;
+            border-top: 2px solid transparent;
+            border-radius: 15px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+        }
+
+        .loading .wave-1,
+        .loading .wave-2 {
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            left: -35%;
+            top: 20px;
+            border-radius: 34%;
+            background-color: #2c22cc;
+        }
+
+        .loading .wave-2 {
+            background-color: #8484db;
+            z-index: -1;
+        }
+
+        .loading .cup:hover .wave-1,
+        .loading .cup:hover .wave-2 {
+            animation: rotate 8s linear forwards;
+        }
+
+        .loading .cup:hover .wave-2 {
+            animation-delay: .1s;
+        }
+
+        @keyframes rotate {
+            100% {
+                top: 210px;
+            }
+
+            0% {
+                top: 30px;
+                transform: rotate(720deg);
+            }
+        }
+
+        .back {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="loading">
+        <div class="cup">
+            <div class="wave-1"></div>
+            <div class="wave-2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loader Square</title>
+    <style>
+        body,
+        html {
+            height: 100vh;
+            background-color: #4d495b;
+            --box-size: 100px;
+        }
+
+        .container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            animation: spin 8s linear infinite;
+            height: var(--box-size);
+            width: var(--box-size);
+        }
+
+        .container div {
+            position: absolute;
+            height: var(--box-size);
+            width: var(--box-size);
+            opacity: .5;
+        }
+
+        .container div span {
+            display: block;
+            float: left;
+            width: 50px;
+            height: 50px;
+            background-color: #ffc867;
+            box-shadow: 0px 0px 2px 1px #222;
+            animation: load 2s linear infinite;
+        }
+
+        .container div:last-child {
+            transform: rotate(45deg);
+        }
+
+        .container div:last-child span {
+            background-color: #62a8e5;
+        }
+
+        @keyframes load {
+            50% {
+                border-radius: 100%;
+                transform: scale(.5);
+            }
+
+            100% {
+                border-radius: 0px;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+
+        .back {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="container">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

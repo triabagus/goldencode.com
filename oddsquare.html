@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Odd Square</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            --pos: 2px;
+            --color: #4f3f68;
+            --reg-size: 32px;
+            --border-radius: 4px;
+            --reg-anime: translate(-50%, -50%) rotate(45deg);
+        }
+
+        body {
+            background: #faebef;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .square:before,
+        .square:after {
+            content: "";
+            bottom: var(--pos);
+        }
+
+        .square:before {
+            left: var(--pos);
+        }
+
+        .square:after {
+            right: var(--pos);
+        }
+
+        .container .square {
+            position: absolute;
+            border-radius: var(--border-radius);
+            width: 74px;
+            height: 74px;
+            color: var(--color);
+            border: 2px solid;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            animation: reg-anime 1s ease-in-out infinite;
+        }
+
+        .container .odd-square,
+        .square:before,
+        .square:after {
+            position: absolute;
+            width: var(--reg-size);
+            height: var(--reg-size);
+            background: var(--color);
+            border-radius: var(--border-radius);
+        }
+
+        .container .odd-square {
+            left: var(--pos);
+            top: var(--pos);
+            animation: slide 1s ease-in-out infinite;
+        }
+
+        @keyframes slide {
+            33% {
+                left: var(--pos);
+            }
+
+            67%,
+            100% {
+                left: 36px;
+            }
+        }
+
+        @keyframes reg-anime {
+            50% {
+                transform: var(--reg-anime);
+            }
+
+            100% {
+                transform: var(--reg-anime);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="container">
+        <div class="square">
+            <div class="odd-square"></div>
+        </div>
+    </div>
+</body>
+
+</html>

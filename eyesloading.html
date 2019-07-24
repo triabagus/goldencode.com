@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eyes Loading</title>
+    <style>
+        html,
+        body {
+            background: #4D4958;
+        }
+
+        .loading-container {
+            display: block;
+            width: 40%;
+            min-height: 55%;
+            align-items: center;
+            border: 2px dotted #62A8E5;
+            padding: 3%;
+            margin: 0 auto;
+        }
+
+        .loader {
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+            min-height: 100%;
+            vertical-align: middle;
+        }
+
+        .loading-slide {
+            position: relative;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .loading-slide .slide {
+            position: absolute;
+            width: 25%;
+            height: 5%;
+            background: #62A8E5;
+            animation: slide 2s infinite;
+        }
+
+        .loading-slide .slide-1 {
+            opacity: 0.1;
+            transform: scale(1.8, 1);
+            animation-delay: 0.2s;
+        }
+
+        .loading-slide .slide-2 {
+            opacity: 0.25;
+            transform: scale(1.4, 1);
+            animation-delay: 0.1s;
+        }
+
+        .loading-slide .slide-3 {
+            opacity: 0.5;
+        }
+
+        @keyframes slide {
+
+            0%,
+            100% {
+                left: 0;
+            }
+
+            50% {
+                left: 100%;
+            }
+        }
+
+        .eye {
+            width: 30px;
+            height: 30px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 50px 0 0 0 #ffff;
+            position: relative;
+            margin: 10px auto 50px;
+        }
+
+        .eye:after {
+            content: "";
+            background-color: #4D4958;
+            width: 15px;
+            height: 15px;
+            box-shadow: 50px 0 0 0 #4D4958;
+            border-radius: 50%;
+            left: 9px;
+            top: 12px;
+            position: absolute;
+            animation: eyeball 1s linear infinite alternate;
+        }
+
+        @keyframes eyeball {
+            100% {
+                left: 12px;
+            }
+
+            0% {
+                left: 2px;
+            }
+        }
+
+        .loading-container:hover {
+            cursor: pointer;
+        }
+
+        .loading-container:hover .eye:after {
+            animation-duration: .35s;
+        }
+
+        .loading-container:hover .slide {
+            animation-duration: .7s;
+        }
+
+        .back {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="loading-container">
+        <div class="loader">
+
+            <div class="loading-slide">
+                <div class="eye"></div>
+
+                <div class="slide slide-1"></div>
+                <div class="slide slide-2"></div>
+                <div class="slide slide-3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

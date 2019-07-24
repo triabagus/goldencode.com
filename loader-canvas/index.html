@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loader Canvas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e8f3ee;
+            --min-color: #17796c;
+        }
+
+        #loader,
+        #inner,
+        .bubble {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        #loader {
+            z-index: 9;
+        }
+
+        #inner {
+            height: 65px;
+            width: 65px;
+            background-color: var(--min-color);
+            z-index: 5;
+        }
+
+        .bubble {
+            background-color: #245d38;
+            width: 10px;
+            height: 10px;
+            animation: bubbling 2.5s linear infinite;
+            opacity: .8;
+        }
+
+        .bubble:nth-of-type(2) {
+            animation-delay: .55s;
+            background-color: #527760;
+            width: 13px;
+            height: 13px;
+        }
+
+        .bubble:nth-of-type(3) {
+            animation-delay: .8s;
+            background-color: #fada95;
+            width: 30px;
+            height: 30px;
+        }
+
+        .bubble:nth-of-type(4) {
+            background-color: var(--min-color);
+            animation-delay: 1s;
+            width: 17px;
+            height: 17px;
+        }
+
+        .bubble:nth-of-type(5) {
+            animation-delay: 2s;
+            background-color: #3fa883;
+            width: 25px;
+            height: 25px;
+        }
+
+        @keyframes bubbling {
+            0% {
+                transform: translate(0);
+            }
+
+            50% {
+                transform: translateX(-100px);
+            }
+
+            58% {
+                transform: translateX(-85px);
+            }
+
+            100% {
+                top: -10%;
+                transform: translateX(150px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a class="back" href="../">Back</a></h1>
+    <div id="inner"></div>
+    <canvas id="loader" height="100" width="100"></canvas>
+
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <script src="loader-canvas.js"></script>
+</body>
+
+</html>

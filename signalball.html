@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Signal Ball</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background: #4d495b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            --scale1: scaleY(.2);
+            --scale2: scaleY(.4);
+            --scale4: scaleY(.8);
+            --scale5: scaleY(1);
+            --speed: 4s;
+        }
+
+        .container {
+            position: relative;
+            height: 100px;
+        }
+
+        .signal {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 10px;
+            height: 50px;
+            background: #fff;
+            transform-origin: bottom;
+            transform: var(--scale1);
+            animation: signalUp1 var(--speed) infinite;
+        }
+
+        .signal:nth-child(2) {
+            left: 15px;
+            transform: var(--scale2);
+            animation: signalUp2 var(--speed) infinite;
+        }
+
+        .signal:nth-child(3) {
+            left: 30px;
+            transform: scaleY(.6);
+            animation: signalUp3 var(--speed) infinite;
+        }
+
+        .signal:nth-child(4) {
+            left: 45px;
+            transform: var(--scale4);
+            animation: signalUp4 var(--speed) infinite;
+        }
+
+        .signal:nth-child(5) {
+            left: 60px;
+            transform: var(--scale5);
+            animation: signalUp5 var(--speed) infinite;
+        }
+
+        .ball {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            animation: ball var(--speed) infinite;
+        }
+
+        @keyframes ball {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            5% {
+                transform: translate(8px, -14px);
+            }
+
+            10% {
+                transform: translate(15px, -10px);
+            }
+
+            17% {
+                transform: translate(23px, -24px);
+            }
+
+            20% {
+                transform: translate(30px, -20px);
+            }
+
+            27% {
+                transform: translate(38px, -34px);
+            }
+
+            30% {
+                transform: translate(45px, -30px);
+            }
+
+            37% {
+                transform: translate(53px, -44px);
+            }
+
+            40% {
+                transform: translate(60px, -40px);
+            }
+
+            50% {
+                transform: translate(60px, 0);
+            }
+
+            57% {
+                transform: translate(53px, -14px);
+            }
+
+            60% {
+                transform: translate(45px, -10px);
+            }
+
+            67% {
+                transform: translate(37px, -24px);
+            }
+
+            70% {
+                transform: translate(30px, -20px);
+            }
+
+            77% {
+                transform: translate(22px, -34px);
+            }
+
+            80% {
+                transform: translate(15px, -30px);
+            }
+
+            87% {
+                transform: translate(7px, -44px);
+            }
+
+            90% {
+                transform: translate(0, -40px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes signalUp1 {
+
+            0%,
+            40%,
+            100% {
+                transform: var(--scale1);
+
+            }
+
+            50%,
+            90% {
+                transform: var(--scale5);
+            }
+
+        }
+
+        @keyframes signalUp2 {
+
+            0%,
+            40%,
+            100% {
+                transform: var(--scale2);
+            }
+
+            50%,
+            90% {
+                transform: var(--scale4);
+            }
+        }
+
+        @keyframes signalUp4 {
+
+            0%,
+            40%,
+            100% {
+                transform: var(--scale4);
+            }
+
+            50%,
+            90% {
+                transform: var(--scale2);
+            }
+        }
+
+        @keyframes signalUp5 {
+
+            0%,
+            40%,
+            100% {
+                transform: var(--scale5);
+            }
+
+            50%,
+            90% {
+                transform: var(--scale1);
+            }
+        }
+
+        .back {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="signal"></div>
+        <div class="signal"></div>
+        <div class="signal"></div>
+        <div class="signal"></div>
+        <div class="signal"></div>
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

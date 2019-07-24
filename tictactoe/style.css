@@ -1,0 +1,52 @@
+/* Solution -- Css File */
+body {
+    margin: 0;
+    font-family: 'Raleway';
+    text-align: center;
+}
+
+p a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    background: black;
+    color: white;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game div {
+    flex-basis: 30%;
+    height: 120px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.field1,
+.field2,
+.field4,
+.field5,
+.field7,
+.field8 {
+    border-right: 10px solid black;
+}
+
+.field1,
+.field2,
+.field3,
+.field4,
+.field5,
+.field6 {
+    border-bottom: 10px solid black;
+}

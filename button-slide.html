@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button Slide</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            --circle-size: 50px;
+            --mv-arw-right: 18px;
+            --mv-arw-left: 12px;
+            --arrow-weight: 2px;
+            --color1: #333;
+            --color2: #fff;
+            --max-width: 205px;
+            --hover-duration: .5s;
+            --active-duration: .6s;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #btn {
+            position: relative;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            width: var(--max-width);
+            height: var(--circle-size);
+            background-color: transparent;
+            border-radius: var(--circle-size);
+        }
+
+        #btn .circle {
+            width: var(--circle-size);
+            height: var(--circle-size);
+            background-color: var(--color1);
+            left: 0;
+            top: 0;
+            border-radius: var(--circle-size);
+        }
+
+        #btn .circle,
+        .circle::after,
+        .circle::before,
+        .btn-txt {
+            position: absolute;
+            transition: all var(--hover-duration) cubic-bezier(.64, 0, 0.7, 1);
+        }
+
+        .circle::after {
+            content: '';
+            top: 19px;
+            left: 16px;
+            width: 10px;
+            height: 10px;
+            border-top: var(--arrow-weight) solid var(--color2);
+            border-right: var(--arrow-weight) solid var(--color2);
+            transform: rotate(45 deg);
+        }
+
+        .circle::before {
+            content: '';
+            top: 24px;
+            left: 8px;
+            width: 20px;
+            height: var(--arrow-weight);
+            background-color: var(--color2);
+            opacity: 0;
+        }
+
+        .btn-txt {
+            color: var(--color1);
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 1px;
+            top: 0;
+            left: 60px;
+            line-height: var(--circle-size);
+            text-transform: uppercase;
+        }
+
+        #btn:hover .circle {
+            width: var(--max-width);
+        }
+
+        #btn:hover .circle::after {
+            transform: translate(var(--mv-arw-right), 0) rotate(45deg);
+        }
+
+        #btn:hover .circle::before {
+            transform: translate(var(--mv-arw-right), 0);
+            opacity: 1;
+        }
+
+        #btn:hover .btn-txt {
+            color: var(--color2);
+        }
+
+        #btn:active .circle::after {
+            animation: arrow-p1 var(--active-duration) ease-in-out infinite;
+        }
+
+        #btn:active .circle::before {
+            animation: arrow-p2 var(--active-duration) ease-in-out infinite;
+        }
+
+        @keyframes arrow-p1 {
+            50% {
+                transform: translate(var(--mv-arw-left), 0) rotate(45deg);
+            }
+
+            100% {
+                transform: translate(var(--mv-arw-right), 0) rotate(45deg);
+            }
+        }
+
+        @keyframes arrow-p2 {
+            50% {
+                transform: translate(var(--mv-arw-left), 0);
+            }
+
+            100% {
+                transform: translate(var(--mv-arw-right), 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">
+        <div class="circle"></div>
+        <p class="btn-txt">Learn More</p>
+    </button>
+</body>
+
+</html>

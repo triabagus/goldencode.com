@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Card Profile</title>
+    <style>
+        body {
+            background-color: #fabe58;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card {
+            background-color: white;
+            height: 450px;
+            width: 310px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px 3px rgba(233, 144, 7, 0.7);
+        }
+
+        .info {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .prof {
+            font-size: 25px;
+            position: absolute;
+            top: 140px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #5555;
+        }
+
+        .name {
+            font-size: 35px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #f79f08;
+            position: absolute;
+            letter-spacing: 2px;
+            font-weight: 600;
+            top: 100px;
+        }
+
+        .divider {
+            background-color: #949594;
+            height: 1.5px;
+            width: 50px;
+            position: absolute;
+            top: 190px;
+        }
+
+        .bio {
+            position: absolute;
+            top: 220px;
+            color: #949594;
+            text-align: center;
+            font-size: 14px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 28px;
+            margin: 5px;
+        }
+
+        button {
+            position: absolute;
+            bottom: 25px;
+            background-color: #f79f08;
+            border: none;
+            font-size: 20px;
+            padding: 13px 25px;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-radius: 20px;
+        }
+
+        .photo {
+            height: 100%;
+            width: 100%;
+            background: url(asset/img/profile-me.jpg);
+            position: absolute;
+            bottom: 0;
+            background-size: 120% 100%;
+            border-radius: 8px;
+            transition: 1s;
+        }
+
+        .card:hover .photo {
+            transform: scale(0.5, 0.35) translateY(-650px);
+            background-size: 95% 150%;
+            background-position: 0 -25px;
+            border-radius: 50%;
+        }
+
+        h1 a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><a href="index.php">Back</a></h2>
+    <div class="card">
+
+        <div class="info">
+            <div class="name">Tria Bagus</div>
+            <div class="prof">Web Developer</div>
+            <div class="divider"></div>
+
+            <div class="bio">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quisquam quibusdam excepturi maxime
+                doloremque doloribus iure ratione eos ipsam ipsum qui ea adipisci suscipit possimus iste, laborum
+                consequuntur, aspernatur necessitatibus?
+            </div>
+            <button>Contact Me</button>
+        </div>
+
+        <div class="photo"></div>
+
+    </div>
+</body>
+
+</html>

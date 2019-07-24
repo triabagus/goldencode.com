@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loading Ring</title>
+    <style>
+        body {
+            background: #3fa883;
+            --width: 120px;
+        }
+
+        #container {
+            width: var(--width);
+            height: 60px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #loader {
+            box-sizing: border-box;
+            width: var(--width);
+            height: var(--width);
+            border-style: solid;
+            border-color: #e8f3ef #e8f3ef transparent transparent;
+            border-radius: 50%;
+            animation: run 3s ease-in-out infinite;
+            transform: rotate(-200deg);
+        }
+
+        @keyframes run {
+
+            0%,
+            100% {
+                border-width: 15px;
+            }
+
+            25%,
+            75% {
+                border-width: 6px;
+            }
+
+            50% {
+                transform: rotate(110deg);
+                border-width: 15px;
+            }
+        }
+
+        h2 a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><a href="index.php">Back</a></h2>
+    <div id="container">
+        <div id="loader"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coin Floor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .container {
+            position: absolute;
+            width: 900px;
+            height: 950px;
+            background-color: #feaea5;
+        }
+
+        .floor {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 650px;
+            background-color: #f7f6ee;
+            overflow: hidden;
+        }
+
+        .cash {
+            position: absolute;
+            top: 97px;
+            left: -100px;
+            width: 120px;
+            height: 120px;
+            background-color: #de6465;
+            border-radius: 50%;
+            box-shadow: inset 0px -47px #ffffff2a;
+            animation: move_to_right 2s linear infinite;
+            z-index: 4;
+        }
+
+        .cash::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: #5555558e;
+            right: 0;
+            left: 0;
+            bottom: -3px;
+            margin: auto;
+            border-radius: 50%;
+        }
+
+        .cash span {
+            position: absolute;
+            color: white;
+            top: 3%;
+            left: 30%;
+            font-size: 100px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: -2px -5px #00000067;
+            animation: rotate_cash 2s linear infinite;
+        }
+
+        .hole {
+            position: absolute;
+            top: 211px;
+            right: 90px;
+            width: 150px;
+            height: 10px;
+            background-color: #5555;
+            z-index: 2;
+        }
+
+
+        .hole::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 6px;
+            background-color: #feafa5;
+            z-index: 2;
+        }
+
+        .hidden {
+            position: absolute;
+            width: 100%;
+            height: 430px;
+            bottom: 0;
+            background-color: #f7f6ee;
+            z-index: 90;
+        }
+
+        @keyframes move_to_right {
+            75% {
+                transform: translateX(750px);
+            }
+
+            100% {
+                transform: translate(830px, 200px);
+            }
+        }
+
+        @keyframes rotate_cash {
+            100% {
+                transform: rotate(2turn);
+            }
+        }
+
+        h2 a {
+            color: #de6465;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="floor">
+
+            <div class="hole"></div>
+            <div class="cash">
+                <span>$</span>
+            </div>
+            <h2><a href="index.php">Back</a></h2>
+            <div class="hidden"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>

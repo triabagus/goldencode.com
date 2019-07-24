@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Cup Loading</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1D3660;
+            width: 98vw;
+        }
+
+        .wraper {
+            width: 120px;
+            height: 120px;
+            margin: 15% auto;
+            background-color: #2E6095;
+            border: 2px dotted #F8F1E0;
+            cursor: pointer;
+        }
+
+        .coffe_cup {
+            border-radius: 0px 0px 5px 5px;
+            width: 35px;
+            height: 40px;
+            border: 1px #ffffff solid;
+            margin: 36px auto;
+            position: relative;
+        }
+
+        .wraper:hover .coffe_cup {
+            animation: fill_coffee 5s linear infinite;
+        }
+
+        .coffe_cup:after,
+        .coffe_cup:before {
+            position: absolute;
+            content: "";
+        }
+
+        .coffe_cup:after {
+            width: 12px;
+            height: 20px;
+            border: 1px #fff solid;
+            border-left: none;
+            border-radius: 0px 20px 20px 0px;
+            left: 34px;
+            top: 2px;
+        }
+
+        .wraper:hover .coffe_cup:before {
+            width: 1px;
+            height: 6px;
+            background-color: #ffffffff;
+            top: -10px;
+            left: 11px;
+            box-shadow: 6px 0px 0px 0px #fff, 6px -6px 0px 0px #fff, 12px 0px 0px 0px #fff;
+            animation: hot 1s linear infinite alternate;
+        }
+
+        @keyframes hot {
+            0% {
+                height: 0px;
+            }
+
+            100% {
+                height: 6px;
+            }
+        }
+
+        @keyframes fill_coffee {
+            0% {
+                box-shadow: inset 0px 0px 0px 0px #ffffff;
+            }
+
+            100% {
+                box-shadow: inset 0px -40px 0px 0px #ffffff;
+            }
+        }
+
+        .back {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a class="back" href="index.php">Back</a></h1>
+    <div class="wraper">
+        <div class="coffe_cup"></div>
+    </div>
+</body>
+
+</html>
