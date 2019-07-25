@@ -473,8 +473,3 @@ ul li {
 .codepen {
     background-color: #000;
 }
-
-.lazy {
-    opacity: 0;
-    transition: opacity 1s;
-}
