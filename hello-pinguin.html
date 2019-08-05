@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello Pinguin</title>
+
+    <link rel="icon" type="image/png" href="asset/logo/T..png" sizes="192x192">
+    <link rel="stylesheet" text="text/css" href="asset/css/style.css">
+    <link rel="stylesheet" text="text/css" href="asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/linearicons/style.css">
+    <link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
     <style>
         :root {
             --penguin-size: 300px;
@@ -19,10 +25,6 @@
                 --penguin-size: 200px;
                 --penguin-skin: black;
             }
-        }
-
-        body {
-            background-color: #c6faf1;
         }
 
         .penguin {
@@ -212,43 +214,148 @@
 
         h1,
         p {
-            text-align: center;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .bg-blues {
+            background-color: #c6faf1;
+            z-index: 0;
+            border-radius: 20px;
+        }
+
+        .container {
+            margin: 0 auto;
+        }
+
+        .footer {
+            background-color: white;
         }
     </style>
 </head>
 
 <body>
-    <h1>Hello Pinguin</h1>
-    <p>Mau script nya ? <a href="./">Back</a></p>
-
-    <div class="penguin">
-        <div class="penguin-bottom">
-            <div class="right-hand"></div>
-            <div class="left-hand"></div>
-            <div class="right-feet"></div>
-            <div class="left-feet"></div>
+    <div class="nav">
+        <div class="container_draw nav__container">
+            <a href="./" class="nav__logo">
+                <h1>Laboratorium</h1>
+            </a>
+            <div class="nav__menu">
+                <ul>
+                    <li class="nav__item--list"><a href="https://triabagus.blogspot.com" class="nav__item"
+                            target="_blank" target="_blank">Portfolio</a>
+                    </li>
+                    <li class="nav__item--list"><a href="#" target="_blank" rel="noopener noreferrer"
+                            class="nav__item">Blog</a></li>
+                    <li class="nav__item--list nav__item--list--noMob"><a href="#constributor" rel="noopener noreferrer"
+                            class="nav__item nav__item--list--noMob">Constributor</a></li>
+                    <li class="nav__item--list nav__item--list--noMob"><button class="btn btn-outline-warning"><i
+                                class="lnr lnr-star"></i> Premium</button></li>
+                </ul>
+            </div>
         </div>
-
-        <div class="penguin-top">
-            <div class="right-cheek"></div>
-            <div class="left-cheek"></div>
-            <div class="belly"></div>
-
-            <div class="right-eye">
-                <div class="sparkle"></div>
+    </div>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-4 mt-5 pt-5">
+                <h2 class="text-primary font-weight-bold">Hello Penguin</h2>
+                <p>
+                    <i class="lnr lnr-user"></i> User creator
+                </p>
+                <p>
+                    <i class="lnr lnr-link"></i> <a href="#">copyright.link</a>
+                </p>
             </div>
-            <div class="left-eye">
-                <div class="sparkle"></div>
+            <div class="col-md-8 mt-5 pt-5">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quo rem consequatur officiis nisi
+                    dicta dolorum maiores. Qui, magnam pariatur praesentium natus corrupti architecto quo dignissimos
+                    sit
+                    dolores blanditiis?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quo rem consequatur officiis nisi
+                    dicta dolorum maiores. Qui, magnam pariatur praesentium natus corrupti architecto quo dignissimos
+                    sit
+                    dolores blanditiis?
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-blues">
+
+        <div class="penguin">
+            <div class="penguin-bottom">
+                <div class="right-hand"></div>
+                <div class="left-hand"></div>
+                <div class="right-feet"></div>
+                <div class="left-feet"></div>
             </div>
 
-            <div class="blush-right"></div>
-            <div class="blush-left"></div>
-            <div class="beak-top"></div>
-            <div class="beak-bottom"></div>
+            <div class="penguin-top">
+                <div class="right-cheek"></div>
+                <div class="left-cheek"></div>
+                <div class="belly"></div>
+
+                <div class="right-eye">
+                    <div class="sparkle"></div>
+                </div>
+                <div class="left-eye">
+                    <div class="sparkle"></div>
+                </div>
+
+                <div class="blush-right"></div>
+                <div class="blush-left"></div>
+                <div class="beak-top"></div>
+                <div class="beak-bottom"></div>
+            </div>
+
         </div>
 
     </div>
+    <div class="footer">
+        <div class="copy-right">Copy right : @triabagus , 2019</div>
+    </div>
+
+    <button id="top">TOP</button>
+
+
+    <div class="sticky-container">
+        <ul class="sticky">
+            <li class="facebook">
+                <i class="fa fa-facebook"></i>
+                <p><a href="https://www.facebook.com/tria.b.nt" target="_blank">Sukai saya di<br>Facebook</a></p>
+            </li>
+            <li class="twitter">
+                <i class="fa fa-twitter"></i>
+                <p><a href="https://twitter.com/ho22912902" target="_blank">Ikuti saya di<br>Twitter</a></p>
+            </li>
+            <li class="github">
+                <i class="fa fa-github"></i>
+                <p><a href="https://github.com/triabagus" target="_blank">Ikuti saya di<br>Github</a></p>
+            </li>
+            <li class="linkedin">
+                <i class="fa fa-linkedin"></i>
+                <p><a href="https://www.linkedin.com/in/tria-bagus-1aa15a179/" target="_blank">Ikuti saya
+                        di<br>LinkedIn</a></p>
+            </li>
+            <li class="youtube">
+                <i class="fa fa-youtube"></i>
+                <p><a href="#" target="_blank">Subscribe di <br>YouTube saya</a></p>
+            </li>
+            <li class="instagram">
+                <i class="fa fa-instagram"></i>
+                <p><a href="https://www.instagram.com/triabagus_topx/" target="_blank">Ikuti saya di<br>Instagram</a>
+                </p>
+            </li>
+            <li class="codepen">
+                <i class="fa fa-codepen"></i>
+                <p><a href="https://codepen.io/triabagus/" target="_blank">Ikuti saya di<br>Codepen</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <script src="asset/jquery/jquery.min.js"></script>
+    <script src="asset/js/top.js"></script>
 </body>
 
 </html>

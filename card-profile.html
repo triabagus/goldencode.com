@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Card Profile</title>
+
+    <link rel="icon" type="image/png" href="asset/logo/T..png" sizes="192x192">
+    <link rel="stylesheet" text="text/css" href="asset/css/style.css">
+    <link rel="stylesheet" text="text/css" href="asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/linearicons/style.css">
+    <link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
     <style>
         body {
-            background-color: #fabe58;
             padding: 0;
             margin: 0;
+        }
+
+        .container {
+            margin: 0 auto;
         }
 
         .card {
@@ -71,7 +80,7 @@
             margin: 5px;
         }
 
-        button {
+        .btn-contact {
             position: absolute;
             bottom: 25px;
             background-color: #f79f08;
@@ -81,6 +90,7 @@
             color: white;
             font-family: Georgia, 'Times New Roman', Times, serif;
             border-radius: 20px;
+            cursor: pointer;
         }
 
         .photo {
@@ -104,29 +114,133 @@
         h1 a {
             color: white;
         }
+
+        .mt-6 {
+            margin-top: 50px;
+        }
     </style>
 </head>
 
 <body>
-    <h2><a href="./">Back</a></h2>
-    <div class="card">
-
-        <div class="info">
-            <div class="name">Tria Bagus</div>
-            <div class="prof">Web Developer</div>
-            <div class="divider"></div>
-
-            <div class="bio">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quisquam quibusdam excepturi maxime
-                doloremque doloribus iure ratione eos ipsam ipsum qui ea adipisci suscipit possimus iste, laborum
-                consequuntur, aspernatur necessitatibus?
+    <div class="nav">
+        <div class="container_draw nav__container">
+            <a href="./" class="nav__logo">
+                <h1>Laboratorium</h1>
+            </a>
+            <div class="nav__menu">
+                <ul>
+                    <li class="nav__item--list"><a href="https://triabagus.blogspot.com" class="nav__item"
+                            target="_blank" target="_blank">Portfolio</a>
+                    </li>
+                    <li class="nav__item--list"><a href="#" target="_blank" rel="noopener noreferrer"
+                            class="nav__item">Blog</a></li>
+                    <li class="nav__item--list nav__item--list--noMob"><a href="#constributor" rel="noopener noreferrer"
+                            class="nav__item nav__item--list--noMob">Constributor</a></li>
+                    <li class="nav__item--list nav__item--list--noMob"><button class="btn btn-outline-warning"><i
+                                class="lnr lnr-star"></i> Premium</button></li>
+                </ul>
             </div>
-            <button>Contact Me</button>
+        </div>
+    </div>
+
+    <div class="container ">
+        <div class="row mb-5">
+            <div class="col-md-12 mt-5"></div>
+            <div class="col-md-4 mt-5">
+                <h2 class="text-primary font-weight-bold">Card Profile</h2>
+                <p>
+                    <i class="lnr lnr-user"></i> User creator
+                </p>
+                <p>
+                    <i class="lnr lnr-link"></i> <a href="#">copyright.link</a>
+                </p>
+            </div>
+            <div class="col-md-8 mt-5">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quo rem consequatur officiis nisi
+                    dicta dolorum maiores. Qui, magnam pariatur praesentium natus corrupti architecto quo dignissimos
+                    sit
+                    dolores blanditiis?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quo rem consequatur officiis nisi
+                    dicta dolorum maiores. Qui, magnam pariatur praesentium natus corrupti architecto quo dignissimos
+                    sit
+                    dolores blanditiis?
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col mt-5">
+                <div class="card mt-6 mb-5">
+                    <div class="info">
+                        <div class="name">Tria Bagus</div>
+                        <div class="prof">Web Developer</div>
+                        <div class="divider"></div>
+
+                        <div class="bio">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quisquam quibusdam
+                            excepturi
+                            maxime
+                            doloremque doloribus iure ratione eos ipsam ipsum qui ea adipisci suscipit possimus iste,
+                            laborum
+                            consequuntur, aspernatur necessitatibus?
+                        </div>
+                        <button class="btn-contact">Contact Me</button>
+                    </div>
+
+                    <div class="photo"></div>
+
+                </div>
+            </div>
         </div>
 
-        <div class="photo"></div>
-
     </div>
+
+    <button id="top">TOP</button>
+
+
+    <div class="sticky-container">
+        <ul class="sticky">
+            <li class="facebook">
+                <i class="fa fa-facebook"></i>
+                <p><a href="https://www.facebook.com/tria.b.nt" target="_blank">Sukai saya di<br>Facebook</a></p>
+            </li>
+            <li class="twitter">
+                <i class="fa fa-twitter"></i>
+                <p><a href="https://twitter.com/ho22912902" target="_blank">Ikuti saya di<br>Twitter</a></p>
+            </li>
+            <li class="github">
+                <i class="fa fa-github"></i>
+                <p><a href="https://github.com/triabagus" target="_blank">Ikuti saya di<br>Github</a></p>
+            </li>
+            <li class="linkedin">
+                <i class="fa fa-linkedin"></i>
+                <p><a href="https://www.linkedin.com/in/tria-bagus-1aa15a179/" target="_blank">Ikuti saya
+                        di<br>LinkedIn</a></p>
+            </li>
+            <li class="youtube">
+                <i class="fa fa-youtube"></i>
+                <p><a href="#" target="_blank">Subscribe di <br>YouTube saya</a></p>
+            </li>
+            <li class="instagram">
+                <i class="fa fa-instagram"></i>
+                <p><a href="https://www.instagram.com/triabagus_topx/" target="_blank">Ikuti saya di<br>Instagram</a>
+                </p>
+            </li>
+            <li class="codepen">
+                <i class="fa fa-codepen"></i>
+                <p><a href="https://codepen.io/triabagus/" target="_blank">Ikuti saya di<br>Codepen</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <script src="asset/jquery/jquery.min.js"></script>
+    <script src="asset/js/top.js"></script>
 </body>
 
 </html>
