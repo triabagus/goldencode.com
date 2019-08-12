@@ -160,13 +160,22 @@
         <div class="overlay-content">
             <a href="https://triabagus.blogspot.com" target="blank">Portfolio</a>
             <a href="#">Blog</a>
-            <a href="#constributor">Constributor</a>
+            <a href="#constributor" function="closeNav()">Constributor</a>
             <a href="#"><button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button></a>
         </div>
     </div>
 
     <script>
         function openNav() {
+            var x = document.getElementById("myNav");
+            if (x.style.width === "0%") {
+                x.style.width = "100%";
+            } else {
+                x.style.width = "0%";
+            }
+        }
+
+        function closeNav() {
             var x = document.getElementById("myNav");
             if (x.style.width === "0%") {
                 x.style.width = "100%";
