@@ -156,19 +156,18 @@
         </ul>
     </div>
 
-    <div class="myNav overlay">
+    <div id="myNav" class="overlay">
         <div class="overlay-content">
-            <a class="myNav" href="https://triabagus.blogspot.com" target="blank">Portfolio</a>
-            <a class="myNav" href="#">Blog</a>
-            <a class="myNav" href="#constributor">Constributor</a>
-            <a class="myNav" href="#"><button class="btn btn-outline-warning"><i class="lnr lnr-star"></i>
-                    Premium</button></a>
+            <a href="https://triabagus.blogspot.com" target="blank">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#constributor">Constributor</a>
+            <a href="#"><button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button></a>
         </div>
     </div>
 
     <script>
         function openNav() {
-            var x = document.getElementsByClassName("myNav");
+            var x = document.getElementById("myNav");
             if (x.style.width === "0%") {
                 x.style.width = "100%";
             } else {
