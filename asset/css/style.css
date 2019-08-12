@@ -174,7 +174,7 @@ div.content .card h1 {
 .footer {
     width: 100%;
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     padding: 30px 0px 0px 0px;
     background-color: #212324;
     color: #fff;
@@ -214,15 +214,15 @@ div.content .card h1 {
     display: none;
     left: 20px;
     cursor: pointer;
-    font-size: 15px;
-    background-color: gold;
+    font-size: 40px;
+    background-color: transparent;
     outline: none;
     height: 50px;
     width: 50px;
-    color: white;
+    color: gold;
     border: none;
     border-radius: 50%;
-    font-weight: bold;
+    font-weight: 400;
     z-index: 2;
 }
 
@@ -471,6 +471,11 @@ ul li {
     text-decoration: line-through;
 }
 
+
+.nav__logo {
+    font-size: 2.5rem;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px
@@ -494,7 +499,7 @@ ul li {
     ul.sidenav li a {
         float: left;
         width: 90%;
-        padding: 15px;
+        padding: 70px;
         height: auto;
 
     }
@@ -544,5 +549,17 @@ ul li {
 
     .icon a {
         display: block;
+    }
+
+    .nav__logo {
+        font-size: 1.5rem;
+    }
+
+    .sticky-container {
+        top: 85px;
+    }
+
+    ul.sidenav li a {
+        height: 200px;
     }
 }
