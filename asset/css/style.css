@@ -541,4 +541,8 @@ ul li {
         float: left;
         width: 90%;
     }
+
+    .icon a {
+        display: block;
+    }
 }
