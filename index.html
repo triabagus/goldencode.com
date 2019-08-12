@@ -22,15 +22,25 @@
             </a>
             <div class="nav__menu">
                 <ul>
-                    <li class="nav__item--list"><a href="https://triabagus.blogspot.com" class="nav__item"
-                            target="_blank" target="_blank">Portfolio</a>
+                    <li class="nav__item--list">
+                        <a href="https://triabagus.blogspot.com" class="nav__item" target="_blank"
+                            target="_blank">Portfolio</a>
                     </li>
-                    <li class="nav__item--list"><a href="#" target="_blank" rel="noopener noreferrer"
-                            class="nav__item">Blog</a></li>
-                    <li class="nav__item--list nav__item--list--noMob"><a href="#constributor" rel="noopener noreferrer"
-                            class="nav__item nav__item--list--noMob">Constributor</a></li>
-                    <li class="nav__item--list nav__item--list--noMob"><button class="btn btn-outline-warning"><i
-                                class="lnr lnr-star"></i> Premium</button></li>
+                    <li class="nav__item--list">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="nav__item">Blog</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="#constributor" rel="noopener noreferrer"
+                            class="nav__item nav__item--list--noMob">Constributor</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button>
+                    </li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="openNav()">
+                            <i class="lnr lnr-menu"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -146,7 +156,25 @@
         </ul>
     </div>
 
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="https://triabagus.blogspot.com" target="blank">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#constributor">Constributor</a>
+            <a href="#"><button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button></a>
+        </div>
+    </div>
 
+    <script>
+        function openNav() {
+            var x = document.getElementById("myNav");
+            if (x.style.width === "0%") {
+                x.style.width = "100%";
+            } else {
+                x.style.width = "0%";
+            }
+        }
+    </script>
     <script src="asset/jquery/jquery.min.js"></script>
     <script src="asset/js/top.js"></script>
 
