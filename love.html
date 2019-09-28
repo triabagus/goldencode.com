@@ -91,20 +91,31 @@
 
     <div class="nav">
         <div class="container_draw nav__container">
-            <a href="./" class="nav__logo">
-                <h1>Laboratorium</h1>
+            <a href="./" class="nav__logo" onclick="closeNav()">
+                Laboratorium
             </a>
             <div class="nav__menu">
                 <ul>
-                    <li class="nav__item--list"><a href="https://triabagus.blogspot.com" class="nav__item"
-                            target="_blank" target="_blank">Portfolio</a>
+                    <li class="nav__item--list">
+                        <a href="https://triabagus.blogspot.com" class="nav__item" target="_blank"
+                            target="_blank">Portfolio</a>
                     </li>
-                    <li class="nav__item--list"><a href="#" target="_blank" rel="noopener noreferrer"
-                            class="nav__item">Blog</a></li>
-                    <li class="nav__item--list nav__item--list--noMob"><a href="#constributor" rel="noopener noreferrer"
-                            class="nav__item nav__item--list--noMob">Constributor</a></li>
-                    <li class="nav__item--list nav__item--list--noMob"><button class="btn btn-outline-warning"><i
-                                class="lnr lnr-star"></i> Premium</button></li>
+                    <li class="nav__item--list">
+                        <a href="http://triabagus.atwebpages.com/" target="_blank" rel="noopener noreferrer"
+                            class="nav__item">Blog</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="#constributor" rel="noopener noreferrer"
+                            class="nav__item nav__item--list--noMob">Constributor</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button>
+                    </li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="openNav()">
+                            <i class="lnr lnr-menu"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -119,7 +130,8 @@
                     <i class="lnr lnr-user"></i> User creator
                 </p>
                 <p>
-                    <i class="lnr lnr-link"></i> <a href="#">copyright.link</a>
+                    <i class="lnr lnr-link"></i> <a
+                        href="https://github.com/triabagus/triabagus.github.io/blob/master/love.html">Link Source</a>
                 </p>
             </div>
             <div class="col-md-8 mt-5">
@@ -153,48 +165,78 @@
     </div>
 
     <div class="footer">
+        <div class="social-footer">
+            <h6>Social Media</h6>
+            <a href="https://www.facebook.com/tria.b.nt" target="_blank">
+                <span class="facebook">
+                    <i class="fa fa-facebook"></i>
+                </span>
+            </a>
+            <a href="https://twitter.com/ho22912902" target="_blank">
+                <span class="twitter">
+                    <i class="fa fa-twitter"></i>
+                </span>
+            </a>
+            <a href="https://github.com/triabagus" target="_blank">
+                <span class="github">
+                    <i class="fa fa-github"></i>
+                </span>
+            </a>
+            <a href="https://www.linkedin.com/in/tria-bagus-1aa15a179/" target="_blank">
+                <span class="linkedin">
+                    <i class="fa fa-linkedin"></i>
+                </span>
+            </a>
+            <a href="https://www.youtube.com/channel/UCHcS6NOcZAm486_3bIw_g_A" target="_blank">
+                <span class="youtube">
+                    <i class="fa fa-youtube"></i>
+                </span>
+            </a>
+            <a href="https://www.instagram.com/triabagus.official" target="_blank">
+                <span class="instagram">
+                    <i class="fa fa-instagram"></i>
+                </span>
+            </a>
+            <a href="https://codepen.io/triabagus/" target="_blank">
+                <span class="codepen">
+                    <i class="fa fa-codepen"></i>
+                </span>
+            </a>
+            <a href="https://dribbble.com/triabagus/" target="_blank">
+                <span class="dribbble">
+                    <i class="fa fa-dribbble"></i>
+                </span>
+            </a>
+            <a href="https://www.behance.net/triatop96792" target="_blank">
+                <span class="behance">
+                    <i class="fa fa-behance"></i>
+                </span>
+            </a>
+            <a href="https://stackoverflow.com/users/10947595/tria" target="_blank">
+                <span class="stack">
+                    <i class="fa fa-stack-overflow"></i>
+                </span>
+            </a>
+            <a href="https://medium.com/@triatop9" target="_blank">
+                <span class="medium">
+                    <i class="fa fa-medium"></i>
+                </span>
+            </a>
+        </div>
         <div class="copy-right">Copy right : @triabagus , 2019</div>
     </div>
 
-    <button id="top">TOP</button>
+    <button id="top"><i class="lnr lnr-arrow-up-circle"></i></button>
 
-
-    <div class="sticky-container">
-        <ul class="sticky">
-            <li class="facebook">
-                <i class="fa fa-facebook"></i>
-                <p><a href="https://www.facebook.com/tria.b.nt" target="_blank">Sukai saya di<br>Facebook</a></p>
-            </li>
-            <li class="twitter">
-                <i class="fa fa-twitter"></i>
-                <p><a href="https://twitter.com/ho22912902" target="_blank">Ikuti saya di<br>Twitter</a></p>
-            </li>
-            <li class="github">
-                <i class="fa fa-github"></i>
-                <p><a href="https://github.com/triabagus" target="_blank">Ikuti saya di<br>Github</a></p>
-            </li>
-            <li class="linkedin">
-                <i class="fa fa-linkedin"></i>
-                <p><a href="https://www.linkedin.com/in/tria-bagus-1aa15a179/" target="_blank">Ikuti saya
-                        di<br>LinkedIn</a></p>
-            </li>
-            <li class="youtube">
-                <i class="fa fa-youtube"></i>
-                <p><a href="#" target="_blank">Subscribe di <br>YouTube saya</a></p>
-            </li>
-            <li class="instagram">
-                <i class="fa fa-instagram"></i>
-                <p><a href="https://www.instagram.com/triabagus_topx/" target="_blank">Ikuti saya
-                        di<br>Instagram</a>
-                </p>
-            </li>
-            <li class="codepen">
-                <i class="fa fa-codepen"></i>
-                <p><a href="https://codepen.io/triabagus/" target="_blank">Ikuti saya di<br>Codepen</a>
-                </p>
-            </li>
-        </ul>
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="https://triabagus.blogspot.com" target="blank">Portfolio</a>
+            <a href="http://triabagus.atwebpages.com/">Blog</a>
+            <a href="#constributor" onclick="closeNav()">Constributor</a>
+            <a href="#"><button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button></a>
+        </div>
     </div>
+
     <script src="asset/jquery/jquery.min.js"></script>
     <script src="asset/js/top.js"></script>
 </body>

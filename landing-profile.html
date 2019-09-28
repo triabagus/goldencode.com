@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landing Profile</title>
+    <link rel="icon" type="image/png" href="asset/logo/T..png" sizes="192x192">
+    <link rel="stylesheet" text="text/css" href="asset/css/style.css">
+    <link rel="stylesheet" text="text/css" href="asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/linearicons/style.css">
+    <link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
     <style>
         body {
             background-color: #333;
         }
 
-        .container {
+        .container-landing {
             position: absolute;
             left: 35%;
             top: 45%;
             perspective: 1000px;
         }
 
-        .card {
+        .card-landing {
             position: absolute;
             width: 450px;
             height: 110px;
@@ -27,13 +32,13 @@
             animation: spin 5s ease infinite;
         }
 
-        .card img {
+        .card-landing img {
             float: left;
             margin: 5px;
             border-radius: 50%;
         }
 
-        a {
+        .a-landing {
             position: absolute;
             text-decoration: none;
             font-size: 24px;
@@ -45,7 +50,7 @@
 
         }
 
-        p {
+        .p-landing {
             position: absolute;
             font-size: 18px;
             font-family: monospace;
@@ -63,18 +68,70 @@
                 transform: rotateY(1turn);
             }
         }
+
+        @media screen and (max-width: 600px) {
+            .card-landing {
+                width: 250px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="card">
-            <img src="asset/img/me.jpg" alt="me">
-            <a href="#" class="author">Tria</a>
-            <a href="./" class="author">Back to Dashboard</a>
-            <p>Web Developer</p>
+
+    <div class="nav">
+        <div class="container_draw nav__container">
+            <a href="./" class="nav__logo" onclick="closeNav()">
+                Laboratorium
+            </a>
+            <div class="nav__menu">
+                <ul>
+                    <li class="nav__item--list">
+                        <a href="https://triabagus.blogspot.com" class="nav__item" target="_blank"
+                            target="_blank">Portfolio</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="http://triabagus.atwebpages.com/" target="_blank" rel="noopener noreferrer"
+                            class="nav__item">Blog</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="#constributor" rel="noopener noreferrer"
+                            class="nav__item nav__item--list--noMob">Constributor</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button>
+                    </li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="openNav()">
+                            <i class="lnr lnr-menu"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+    <div class="container-landing">
+        <div class="card-landing">
+            <img src="asset/img/me.jpg" alt="me">
+            <a class="a-landing" href="#" class="author">Tria</a>
+            <p class="p-landing">Web Developer</p>
+        </div>
+    </div>
+
+
+    <button id="top"><i class="lnr lnr-arrow-up-circle"></i></button>
+
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="https://triabagus.blogspot.com" target="blank">Portfolio</a>
+            <a href="http://triabagus.atwebpages.com/">Blog</a>
+            <a href="#constributor" onclick="closeNav()">Constributor</a>
+            <a href="#"><button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button></a>
+        </div>
+    </div>
+
+    <script src="asset/jquery/jquery.min.js"></script>
+    <script src="asset/js/top.js"></script>
 </body>
 
 </html>

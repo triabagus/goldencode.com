@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dark Light Mode</title>
+
+    <link rel="icon" type="image/png" href="asset/logo/T..png" sizes="192x192">
+
+    <link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
 
@@ -16,6 +20,7 @@
             --bg-color: #fff;
             --heading-color: #292922;
             --heading2-color: #292922;
+            --btn-dashboard: gold;
         }
 
         [data-theme="dark"] {
@@ -25,6 +30,7 @@
             --bg-color: #161625;
             --heading-color: #818cab;
             --heading2-color: gold;
+            --btn-dashboard: #818cab;
         }
 
         body {
@@ -63,7 +69,10 @@
 
         }
 
-        a:hover,
+        a:hover {
+            text-decoration: none
+        }
+
         a:focus {
             border-bottom: 3px solid currentColor;
         }
@@ -147,10 +156,92 @@
         .slider.round:before {
             border-radius: 50%;
         }
+
+        #btn-dashboard {
+            background-color: var(--btn-dashboard);
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .facebook {
+            background-color: #1877f2;
+        }
+
+        .twitter {
+            background-color: #1da1f2;
+        }
+
+        .github {
+            background-color: #211F1F;
+        }
+
+        .linkedin {
+            background-color: #007bb5;
+        }
+
+        .youtube {
+            background-color: #ff0000;
+        }
+
+        .instagram {
+            background-color: #7232bd;
+        }
+
+        .codepen {
+            background-color: #000;
+        }
+
+        .dribbble {
+            background-color: #ea4c89;
+        }
+
+        .medium {
+            background-color: #02b875;
+        }
+
+        .behance {
+            background-color: #053eff;
+        }
+
+        .stack {
+            background-color: #f48024;
+        }
+
+
+
+        .social-footer {
+            padding: 190px 15px 50px 15px;
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        .social-footer h6 {
+            color: #212529;
+            margin-bottom: 35px;
+            font-size: x-large;
+            font-weight: 400;
+        }
+
+        .social-footer span {
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 0 5px;
+        }
+
+        .social-footer span:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        .social-footer a span i {
+            color: white;
+        }
     </style>
 </head>
 
 <body>
+
     <nav>
         <div class="theme-switch-wrapper">
             <label class="theme-switch" for="checkbox">
@@ -163,7 +254,7 @@
     </nav>
     <section>
         <article class="post">
-            <h2><a href="./">Back</a></h2>
+            <h2><a id="btn-dashboard" href="./">Back to dashboard</a></h2>
             <h1>The Principles of Good Design</h1>
             <p class="post-meta">Circa 2014 <span>by</span> Ian Daniel Stewart</p>
 
@@ -178,6 +269,65 @@
             <a href="#">Read More</a>
         </article>
     </section>
+
+    <div class="social-footer">
+        <h6>Social Media</h6>
+        <a href="https://www.facebook.com/tria.b.nt" target="_blank">
+            <span class="facebook">
+                <i class="fa fa-facebook"></i>
+            </span>
+        </a>
+        <a href="https://twitter.com/ho22912902" target="_blank">
+            <span class="twitter">
+                <i class="fa fa-twitter"></i>
+            </span>
+        </a>
+        <a href="https://github.com/triabagus" target="_blank">
+            <span class="github">
+                <i class="fa fa-github"></i>
+            </span>
+        </a>
+        <a href="https://www.linkedin.com/in/tria-bagus-1aa15a179/" target="_blank">
+            <span class="linkedin">
+                <i class="fa fa-linkedin"></i>
+            </span>
+        </a>
+        <a href="https://www.youtube.com/channel/UCHcS6NOcZAm486_3bIw_g_A" target="_blank">
+            <span class="youtube">
+                <i class="fa fa-youtube"></i>
+            </span>
+        </a>
+        <a href="https://www.instagram.com/triabagus.official" target="_blank">
+            <span class="instagram">
+                <i class="fa fa-instagram"></i>
+            </span>
+        </a>
+        <a href="https://codepen.io/triabagus/" target="_blank">
+            <span class="codepen">
+                <i class="fa fa-codepen"></i>
+            </span>
+        </a>
+        <a href="https://dribbble.com/triabagus/" target="_blank">
+            <span class="dribbble">
+                <i class="fa fa-dribbble"></i>
+            </span>
+        </a>
+        <a href="https://www.behance.net/triatop96792" target="_blank">
+            <span class="behance">
+                <i class="fa fa-behance"></i>
+            </span>
+        </a>
+        <a href="https://stackoverflow.com/users/10947595/tria" target="_blank">
+            <span class="stack">
+                <i class="fa fa-stack-overflow"></i>
+            </span>
+        </a>
+        <a href="https://medium.com/@triatop9" target="_blank">
+            <span class="medium">
+                <i class="fa fa-medium"></i>
+            </span>
+        </a>
+    </div>
 
     <script>
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');

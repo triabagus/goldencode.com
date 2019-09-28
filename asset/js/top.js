@@ -1,4 +1,20 @@
 // Scroll to top button appear
+function openNav() {
+    var x = document.getElementById("myNav");
+    if (x.style.width === "0%") {
+        x.style.width = "100%";
+    } else {
+        x.style.width = "0%";
+    }
+}
+
+function closeNav() {
+    var x = document.getElementById("myNav");
+    if (x.style.width === "100%") {
+        x.style.width = "0%";
+    }
+}
+
 $(document).on('scroll', function () {
     var scrollDistance = $(this).scrollTop();
     if (scrollDistance > 100) {

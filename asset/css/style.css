@@ -204,7 +204,6 @@ div.content .card h1 {
     margin-top: -3px;
     color: #000;
     background-color: #fff;
-    padding-top: 190px;
     padding-bottom: 50px;
 }
 
@@ -390,11 +389,58 @@ ul li {
 }
 
 .instagram {
-    background-color: #c32aa3;
+    background-color: #7232bd;
 }
 
 .codepen {
     background-color: #000;
+}
+
+.dribbble {
+    background-color: #ea4c89;
+}
+
+.medium {
+    background-color: #02b875;
+}
+
+.behance {
+    background-color: #053eff;
+}
+
+.stack {
+    background-color: #f48024;
+}
+
+
+
+.social-footer {
+    padding: 190px 15px 50px 15px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.social-footer h6 {
+    color: #212529;
+    margin-bottom: 35px;
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.social-footer span {
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 0 5px;
+}
+
+.social-footer span:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.social-footer a span i {
+    color: white;
 }
 
 /* Responsive code */
@@ -510,6 +556,11 @@ ul li {
 
     div.content {
         margin-left: 0;
+    }
+
+    div.social-footer span {
+        display: block;
+        margin: 5px 0px;
     }
 
     div.header img,
