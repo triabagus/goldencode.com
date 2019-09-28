@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Box Hill</title>
+    <link rel="icon" type="image/png" href="asset/logo/T..png" sizes="192x192">
+    <link rel="stylesheet" text="text/css" href="asset/css/style.css">
+    <link rel="stylesheet" text="text/css" href="asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/linearicons/style.css">
+    <link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
     <style>
         html,
         body {
-            background-color: #4C5828;
+            background-color: white;
         }
 
         .wrapper {
@@ -18,7 +23,7 @@
             left: 50%;
             width: 150px;
             height: 150px;
-            background-color: #4C5828;
+            background-color: white;
         }
 
         #hill {
@@ -27,13 +32,13 @@
             left: 10px;
             width: 90px;
             height: 90px;
-            border-left: 4px solid whitesmoke;
+            border-left: 4px solid #4C5828;
             transform: rotate(45deg);
         }
 
         #hill::after {
             content: '';
-            background: #4C5828;
+            background: white;
             position: absolute;
             width: 5px;
             height: 100px;
@@ -43,7 +48,7 @@
             position: absolute;
             width: 16px;
             height: 16px;
-            border: 4px solid whitesmoke;
+            border: 4px solid #4C5828;
             transform: translate(-19px, 30px) rotate(-45deg);
             animation: climb 2.8s ease-in-out infinite;
         }
@@ -98,19 +103,152 @@
                 transform: translate(-22px, 29px) rotate(-227deg);
             }
         }
-
-        .back {
-            color: white;
-        }
     </style>
 </head>
 
 <body>
-    <h1><a class="back" href="./">Back</a></h1>
+    <div class="nav">
+        <div class="container_draw nav__container">
+            <a href="./" class="nav__logo" onclick="closeNav()">
+                Laboratorium
+            </a>
+            <div class="nav__menu">
+                <ul>
+                    <li class="nav__item--list">
+                        <a href="https://triabagus.blogspot.com" class="nav__item" target="_blank"
+                            target="_blank">Portfolio</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="http://triabagus.atwebpages.com/" target="_blank" rel="noopener noreferrer"
+                            class="nav__item">Blog</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="#constributor" rel="noopener noreferrer"
+                            class="nav__item nav__item--list--noMob">Constributor</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button>
+                    </li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="openNav()">
+                            <i class="lnr lnr-menu"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-0">
+        <div class="row mb-5">
+            <div class="col-md-4 mt-5" style="padding:50px 0;">
+                <h2 class=" text-primary font-weight-bold">Box Hill</h2>
+                <p>
+                    <i class="lnr lnr-user"></i> User creator
+                </p>
+                <p>
+                    <i class="lnr lnr-link"></i> <a
+                        href="https://github.com/triabagus/triabagus.github.io/blob/master/boxhill.html">Link
+                        Source</a>
+                </p>
+            </div>
+            <div class="col-md-8 mt-5" style="padding:50px 0;">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quo rem consequatur officiis nisi
+                    dicta dolorum maiores. Qui, magnam pariatur praesentium natus corrupti architecto quo dignissimos
+                    sit
+                    dolores blanditiis?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quo rem consequatur officiis nisi
+                    dicta dolorum maiores. Qui, magnam pariatur praesentium natus corrupti architecto quo dignissimos
+                    sit
+                    dolores blanditiis?
+                </p>
+            </div>
+        </div>
+    </div>
+
     <div class="wrapper">
         <div id="box"></div>
         <div id="hill"></div>
     </div>
+
+    <div class="footer" style="background-color: white">
+        <div class="social-footer">
+            <h6>Social Media</h6>
+            <a href="https://www.facebook.com/tria.b.nt" target="_blank">
+                <span class="facebook">
+                    <i class="fa fa-facebook"></i>
+                </span>
+            </a>
+            <a href="https://twitter.com/ho22912902" target="_blank">
+                <span class="twitter">
+                    <i class="fa fa-twitter"></i>
+                </span>
+            </a>
+            <a href="https://github.com/triabagus" target="_blank">
+                <span class="github">
+                    <i class="fa fa-github"></i>
+                </span>
+            </a>
+            <a href="https://www.linkedin.com/in/tria-bagus-1aa15a179/" target="_blank">
+                <span class="linkedin">
+                    <i class="fa fa-linkedin"></i>
+                </span>
+            </a>
+            <a href="https://www.youtube.com/channel/UCHcS6NOcZAm486_3bIw_g_A" target="_blank">
+                <span class="youtube">
+                    <i class="fa fa-youtube"></i>
+                </span>
+            </a>
+            <a href="https://www.instagram.com/triabagus.official" target="_blank">
+                <span class="instagram">
+                    <i class="fa fa-instagram"></i>
+                </span>
+            </a>
+            <a href="https://codepen.io/triabagus/" target="_blank">
+                <span class="codepen">
+                    <i class="fa fa-codepen"></i>
+                </span>
+            </a>
+            <a href="https://dribbble.com/triabagus/" target="_blank">
+                <span class="dribbble">
+                    <i class="fa fa-dribbble"></i>
+                </span>
+            </a>
+            <a href="https://www.behance.net/triatop96792" target="_blank">
+                <span class="behance">
+                    <i class="fa fa-behance"></i>
+                </span>
+            </a>
+            <a href="https://stackoverflow.com/users/10947595/tria" target="_blank">
+                <span class="stack">
+                    <i class="fa fa-stack-overflow"></i>
+                </span>
+            </a>
+            <a href="https://medium.com/@triatop9" target="_blank">
+                <span class="medium">
+                    <i class="fa fa-medium"></i>
+                </span>
+            </a>
+        </div>
+        <div class="copy-right">Copy right : @triabagus , 2019</div>
+    </div>
+
+    <button id="top"><i class="lnr lnr-arrow-up-circle"></i></button>
+
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="https://triabagus.blogspot.com" target="blank">Portfolio</a>
+            <a href="http://triabagus.atwebpages.com/">Blog</a>
+            <a href="#constributor" onclick="closeNav()">Constributor</a>
+            <a href="#"><button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button></a>
+        </div>
+    </div>
+
+    <script src="asset/jquery/jquery.min.js"></script>
+    <script src="asset/js/top.js"></script>
 </body>
 
 </html>

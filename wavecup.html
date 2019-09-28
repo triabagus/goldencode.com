@@ -6,30 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wave Cup</title>
+
+    <link rel="icon" type="image/png" href="asset/logo/T..png" sizes="192x192">
+    <link rel="stylesheet" text="text/css" href="asset/css/style.css">
+    <link rel="stylesheet" text="text/css" href="asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/linearicons/style.css">
+    <link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: #262626;
+            background: white;
         }
 
         .loading {
             position: absolute;
-            top: 50%;
+            top: 65%;
             left: 50%;
+            z-index: 3;
             transform: translate(-50%, -50%);
+
         }
 
         .loading .cup {
             position: relative;
-            width: 300px;
+            width: 250px;
             height: 200px;
-            border: 6px solid white;
             border-top: 2px solid transparent;
             border-radius: 15px;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             overflow: hidden;
+            box-shadow: 5px 5px 5px 5px #ccc;
         }
 
         .loading .wave-1,
@@ -41,6 +49,7 @@
             top: 20px;
             border-radius: 34%;
             background-color: #2c22cc;
+            box-shadow: 5px 5px 5px 5px #ccc;
         }
 
         .loading .wave-2 {
@@ -75,13 +84,148 @@
 </head>
 
 <body>
-    <h1><a class="back" href="./">Back</a></h1>
+    <div class="nav">
+        <div class="container_draw nav__container">
+            <a href="./" class="nav__logo" onclick="closeNav()">
+                Laboratorium
+            </a>
+            <div class="nav__menu">
+                <ul>
+                    <li class="nav__item--list">
+                        <a href="https://triabagus.blogspot.com" class="nav__item" target="_blank"
+                            target="_blank">Portfolio</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="http://triabagus.atwebpages.com/" target="_blank" rel="noopener noreferrer"
+                            class="nav__item">Blog</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="#constributor" rel="noopener noreferrer"
+                            class="nav__item nav__item--list--noMob">Constributor</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button>
+                    </li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="openNav()">
+                            <i class="lnr lnr-menu"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-0">
+        <div class="row mb-5">
+            <div class="col-md-4 mt-5" style="padding:50px 0;">
+                <h2 class=" text-primary font-weight-bold">Wave Cup</h2>
+                <p>
+                    <i class="lnr lnr-user"></i> User creator
+                </p>
+                <p>
+                    <i class="lnr lnr-link"></i> <a
+                        href="https://github.com/triabagus/triabagus.github.io/blob/master/loaderwrapper.html">Link
+                        Source</a>
+                </p>
+            </div>
+            <div class="col-md-8 mt-5" style="padding:50px 0;">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quo rem consequatur officiis nisi
+                    dicta dolorum maiores. Qui, magnam pariatur praesentium natus corrupti architecto quo dignissimos
+                    sit
+                    dolores blanditiis?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quo rem consequatur officiis nisi
+                    dicta dolorum maiores. Qui, magnam pariatur praesentium natus corrupti architecto quo dignissimos
+                    sit
+                    dolores blanditiis?
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="loading">
         <div class="cup">
             <div class="wave-1"></div>
             <div class="wave-2"></div>
         </div>
     </div>
+
+    <div class="footer" style="background-color: white">
+        <div class="social-footer" style="margin-top:0px;">
+            <h6>Social Media</h6>
+            <a href="https://www.facebook.com/tria.b.nt" target="_blank">
+                <span class="facebook">
+                    <i class="fa fa-facebook"></i>
+                </span>
+            </a>
+            <a href="https://twitter.com/ho22912902" target="_blank">
+                <span class="twitter">
+                    <i class="fa fa-twitter"></i>
+                </span>
+            </a>
+            <a href="https://github.com/triabagus" target="_blank">
+                <span class="github">
+                    <i class="fa fa-github"></i>
+                </span>
+            </a>
+            <a href="https://www.linkedin.com/in/tria-bagus-1aa15a179/" target="_blank">
+                <span class="linkedin">
+                    <i class="fa fa-linkedin"></i>
+                </span>
+            </a>
+            <a href="https://www.youtube.com/channel/UCHcS6NOcZAm486_3bIw_g_A" target="_blank">
+                <span class="youtube">
+                    <i class="fa fa-youtube"></i>
+                </span>
+            </a>
+            <a href="https://www.instagram.com/triabagus.official" target="_blank">
+                <span class="instagram">
+                    <i class="fa fa-instagram"></i>
+                </span>
+            </a>
+            <a href="https://codepen.io/triabagus/" target="_blank">
+                <span class="codepen">
+                    <i class="fa fa-codepen"></i>
+                </span>
+            </a>
+            <a href="https://dribbble.com/triabagus/" target="_blank">
+                <span class="dribbble">
+                    <i class="fa fa-dribbble"></i>
+                </span>
+            </a>
+            <a href="https://www.behance.net/triatop96792" target="_blank">
+                <span class="behance">
+                    <i class="fa fa-behance"></i>
+                </span>
+            </a>
+            <a href="https://stackoverflow.com/users/10947595/tria" target="_blank">
+                <span class="stack">
+                    <i class="fa fa-stack-overflow"></i>
+                </span>
+            </a>
+            <a href="https://medium.com/@triatop9" target="_blank">
+                <span class="medium">
+                    <i class="fa fa-medium"></i>
+                </span>
+            </a>
+        </div>
+        <div class="copy-right">Copy right : @triabagus , 2019</div>
+    </div>
+
+    <button id="top"><i class="lnr lnr-arrow-up-circle"></i></button>
+
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="https://triabagus.blogspot.com" target="blank">Portfolio</a>
+            <a href="http://triabagus.atwebpages.com/">Blog</a>
+            <a href="#constributor" onclick="closeNav()">Constributor</a>
+            <a href="#"><button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button></a>
+        </div>
+    </div>
+
+    <script src="asset/jquery/jquery.min.js"></script>
+    <script src="asset/js/top.js"></script>
 </body>
 
 </html>

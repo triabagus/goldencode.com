@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Round Literally</title>
+    <link rel="icon" type="image/png" href="asset/logo/T..png" sizes="192x192">
+    <link rel="stylesheet" text="text/css" href="asset/css/style.css">
+    <link rel="stylesheet" text="text/css" href="asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/linearicons/style.css">
+    <link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
     <style>
-        .container {
+        .container-round {
             background-color: #238189;
             position: absolute;
             top: 0;
@@ -18,7 +23,7 @@
             width: 100%;
         }
 
-        .container ul {
+        .container-round ul {
             position: absolute;
             top: 35%;
             left: 50%;
@@ -26,13 +31,13 @@
             list-style-type: none;
         }
 
-        .container ul li:after,
-        .container ul:after {
+        .container-round ul li:after,
+        .container-round ul:after {
             content: "";
             display: block;
         }
 
-        .container ul li:after {
+        .container-round ul li:after {
             width: 2em;
             height: 2em;
             background-color: #E8F3EE;
@@ -40,64 +45,64 @@
             border-top-right-radius: 2em;
         }
 
-        .container li {
+        .container-round li {
             position: absolute;
             padding-bottom: 9.6em;
             top: 0;
             left: 0;
         }
 
-        .container li:nth-child(1) {
+        .container-round li:nth-child(1) {
             transform: rotate(0deg);
             animation-delay: .125s;
         }
 
-        .container li:nth-child(2) {
+        .container-round li:nth-child(2) {
             transform: rotate(36deg);
             animation-delay: .25s;
         }
 
-        .container li:nth-child(3) {
+        .container-round li:nth-child(3) {
             transform: rotate(72deg);
             animation-delay: .375s;
         }
 
-        .container li:nth-child(4) {
+        .container-round li:nth-child(4) {
             transform: rotate(108deg);
             animation-delay: .5s;
         }
 
-        .container li:nth-child(5) {
+        .container-round li:nth-child(5) {
             transform: rotate(144deg);
             animation-delay: .625s;
         }
 
-        .container li:nth-child(6) {
+        .container-round li:nth-child(6) {
             transform: rotate(180deg);
             animation-delay: .75s;
         }
 
-        .container li:nth-child(7) {
+        .container-round li:nth-child(7) {
             transform: rotate(216deg);
             animation-delay: .875s;
         }
 
-        .container li:nth-child(8) {
+        .container-round li:nth-child(8) {
             transform: rotate(252deg);
             animation-delay: .1s;
         }
 
-        .container li:nth-child(9) {
+        .container-round li:nth-child(9) {
             transform: rotate(288deg);
             animation-delay: 1.125s;
         }
 
-        .container li:nth-child(10) {
+        .container-round li:nth-child(10) {
             transform: rotate(324deg);
             animation-delay: 1.25s;
         }
 
-        .container li {
+        .container-round li {
             animation: 2.5s leafAnime infinite;
         }
 
@@ -122,8 +127,39 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1><a class="back" href="./">Back</a></h1>
+    <div class="nav">
+        <div class="container_draw nav__container">
+            <a href="./" class="nav__logo" onclick="closeNav()">
+                Laboratorium
+            </a>
+            <div class="nav__menu">
+                <ul>
+                    <li class="nav__item--list">
+                        <a href="https://triabagus.blogspot.com" class="nav__item" target="_blank"
+                            target="_blank">Portfolio</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="http://triabagus.atwebpages.com/" target="_blank" rel="noopener noreferrer"
+                            class="nav__item">Blog</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <a href="#constributor" rel="noopener noreferrer"
+                            class="nav__item nav__item--list--noMob">Constributor</a>
+                    </li>
+                    <li class="nav__item--list">
+                        <button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button>
+                    </li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="openNav()">
+                            <i class="lnr lnr-menu"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-round">
         <ul>
             <li></li>
             <li></li>
@@ -137,6 +173,18 @@
             <li></li>
         </ul>
     </div>
+
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="https://triabagus.blogspot.com" target="blank">Portfolio</a>
+            <a href="http://triabagus.atwebpages.com/">Blog</a>
+            <a href="#constributor" onclick="closeNav()">Constributor</a>
+            <a href="#"><button class="btn btn-outline-warning"><i class="lnr lnr-star"></i> Premium</button></a>
+        </div>
+    </div>
+
+    <script src="asset/jquery/jquery.min.js"></script>
+    <script src="asset/js/top.js"></script>
 </body>
 
 </html>
